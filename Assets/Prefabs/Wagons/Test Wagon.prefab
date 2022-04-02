@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4096830588817707615}
   - component: {fileID: 4096830588817707612}
   - component: {fileID: 4096830588817707602}
+  - component: {fileID: 1373618682028409048}
   m_Layer: 0
   m_Name: Test Wagon
   m_TagString: Untagged
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff337f7010ed629da222cd000ed2009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parts: []
-  health: 2000
+  wagon: {fileID: 1373618682028409048}
+  maxHealth: 0
+  currentHealth: 0
   wagonHealthDecrease: 20
+  wagonHealthIncrease: 5
+--- !u!114 &1373618682028409048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096830588817707603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5800a3b8a1ff392afe4fd23bdb8f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
