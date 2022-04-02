@@ -10,28 +10,21 @@ public class WagonStatus : MonoBehaviour
     private List<GameObject> parts;
 
     [SerializeField]
-    private float partHealthDecrease = 10f, wagonHealthDecrease = 20f;
+    private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f;
     
-    [SerializeField] 
+    [SerializeField]
     private event Action onWagonBroken;
 
-    public Health health { get; private set; }
-
-    private Coroutine statusDecreaseRoutine;
+    public bool isBroken => currentHealth <= 0;
 
     private void Awake()
     {
-        health = GetComponent<Health>();
+        currentHealth = maxHealth;
     }
 
     private void Start()
     {
-        statusDecreaseRoutine = StartCoroutine(DecreasePartsStatus());
-    }
-
-    private void OnDestroy()
-    {
-        StopCoroutine(statusDecreaseRoutine);
+        StartCoroutine(DecreasePartsStatus());
     }
 
     private IEnumerator DecreasePartsStatus()
@@ -40,19 +33,35 @@ public class WagonStatus : MonoBehaviour
         {
             foreach (var status in parts.Select(part => part.GetComponent<PartStatus>()))
             {
-                if (status.health.isDead)
+                if (!status.isBroken)
                 {
-                    health.DecreaseBy(wagonHealthDecrease);
-                    continue;
+                    status.TryBreakPart();
+                    IncreaseHealth(status.getHealthFactor);
+                    continue; 
                 }
-
-                status.DecreasePartHealthBy(partHealthDecrease);
+                
+                DecreaseHealth(status.getHealthFactor);
+                
+                if (isBroken)
+                    onWagonBroken?.Invoke();
             }
-
-            if (health.isDead) 
-                onWagonBroken?.Invoke();
 
             yield return new WaitForSeconds(2f);   
         }
+    }
+
+    private void DecreaseHealth(float decreaseFactor)
+    {
+        var newHealth = currentHealth - (wagonHealthDecrease * decreaseFactor);
+        Debug.Log(newHealth);
+        
+        currentHealth = (currentHealth <= 0f) ? 0f : newHealth;
+    }
+
+    private void IncreaseHealth(float increaseFactor)
+    {
+        var newHealth = currentHealth + (wagonHealthIncrease * increaseFactor);
+        
+        currentHealth = (currentHealth <= maxHealth) ? maxHealth : newHealth;
     }
 }

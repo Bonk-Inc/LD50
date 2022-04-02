@@ -3,17 +3,24 @@ using UnityEngine;
 public class PartStatus : MonoBehaviour
 {
     [SerializeField]
-    private float healthDecreaseFactor = 1f;
-    
-    public Health health { get; private set; }
+    private float healthFactor = 1f, breakFactor = 50f;
 
-    private void Awake()
+    [SerializeField] 
+    private bool broken = false;
+
+    public bool isBroken => broken;
+
+    public float getHealthFactor => healthFactor;
+
+    public void TryBreakPart()
     {
-        health = GetComponent<Health>();
+        var random = (int) Random.Range(0, breakFactor);
+        if (random == 1)
+            broken = true;
     }
 
-    public void DecreasePartHealthBy(float amount)
+    public void FixPart()
     {
-        health.DecreaseBy(amount * healthDecreaseFactor);
+        broken = false;
     }
 }

@@ -376,6 +376,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5456429561439855738, guid: d134417f1cd0c32548e50d4267409eb7, type: 3}
+      propertyPath: healthFactor
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456429561439855738, guid: d134417f1cd0c32548e50d4267409eb7, type: 3}
       propertyPath: healthDecreaseFactor
       value: 0.8
       objectReference: {fileID: 0}
@@ -473,6 +477,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4096830588817707602, guid: 707b61a9ee657a618881374431f9d500, type: 3}
+      propertyPath: maxHealth
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096830588817707602, guid: 707b61a9ee657a618881374431f9d500, type: 3}
+      propertyPath: currentHealth
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 4096830588817707602, guid: 707b61a9ee657a618881374431f9d500, type: 3}
       propertyPath: parts.Array.size
       value: 3
