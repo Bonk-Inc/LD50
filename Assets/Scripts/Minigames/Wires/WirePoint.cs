@@ -64,5 +64,6 @@ public class WirePoint : MonoBehaviour
 enum PointColor{
     RED,
     BLUE,
-    YELLOW
+    YELLOW,
+    GREEN
 }
