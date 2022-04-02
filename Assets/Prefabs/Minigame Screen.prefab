@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 6086437488097234496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.25, y: 0.25}
-  m_AnchorMax: {x: 0.75, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.3, y: 0.3}
+  m_AnchorMax: {x: 0.7, y: 0.7}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 218, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6086437487322509197
 CanvasRenderer:
@@ -66,8 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 13a71f7d9b65c10ff8f00571f8f438ea, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -86,7 +86,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6086437487414744816}
   - component: {fileID: 6086437487414744817}
-  - component: {fileID: 6086437487414744819}
   - component: {fileID: 6086437487414744818}
   m_Layer: 0
   m_Name: Square
@@ -162,18 +161,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6086437487414744819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6086437487414744822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa04b9d1e2270484799839ca8c73d054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &6086437487414744818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,7 +229,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.15619439, g: 0.18115427, b: 0.2830189, a: 0}
+  m_BackGroundColor: {r: 0.5803922, g: 0.6627451, b: 0.6666667, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -386,7 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7526644725755723392}
   m_Layer: 0
-  m_Name: temp
+  m_Name: Minigame Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
