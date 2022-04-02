@@ -933,6 +933,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossing segment
       objectReference: {fileID: 0}
+    - target: {fileID: 7225231866821562401, guid: 702b0b944a7a6c75a96454f031c6b858, type: 3}
+      propertyPath: currentStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225231867836268365, guid: 702b0b944a7a6c75a96454f031c6b858, type: 3}
+      propertyPath: correctStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225231867836268365, guid: 702b0b944a7a6c75a96454f031c6b858, type: 3}
+      propertyPath: currentStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225231868199217270, guid: 702b0b944a7a6c75a96454f031c6b858, type: 3}
+      propertyPath: correctStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225231868199217270, guid: 702b0b944a7a6c75a96454f031c6b858, type: 3}
+      propertyPath: currentStatus
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 702b0b944a7a6c75a96454f031c6b858, type: 3}
 --- !u!1001 &795952079653729082
@@ -1104,6 +1124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valve
       objectReference: {fileID: 0}
+    - target: {fileID: 7129739665602304831, guid: 380dbc165b715cfd88c1f048f16c4e1d, type: 3}
+      propertyPath: currentStatus
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380dbc165b715cfd88c1f048f16c4e1d, type: 3}
 --- !u!1001 &4815979009929729690
@@ -1170,6 +1194,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1155670831331294289, guid: e63f0c5c4d41610c0a75b51c1601d28e, type: 3}
+      propertyPath: currentStatus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501692220585374292, guid: e63f0c5c4d41610c0a75b51c1601d28e, type: 3}
+      propertyPath: correctStatus
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6667813763574581682, guid: e63f0c5c4d41610c0a75b51c1601d28e, type: 3}
       propertyPath: m_Name
       value: Junction 1
