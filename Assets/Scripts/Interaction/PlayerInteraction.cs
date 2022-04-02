@@ -22,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if(other.gameObject != current.gameObject){
+        if(other.gameObject != current?.gameObject){
             return;
         }
         LeaveCurrent();
