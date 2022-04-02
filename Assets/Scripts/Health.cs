@@ -9,6 +9,13 @@ public class Health : MonoBehaviour
     
     public void DecreaseBy(float amount)
     {
-        health -= amount;
+        var newHealth = health - amount;
+        if (newHealth <= 0f)
+        {
+            health = 0f;
+            return;
+        }
+
+        health = newHealth;
     }
 }

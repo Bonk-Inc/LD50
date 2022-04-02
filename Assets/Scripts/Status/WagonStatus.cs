@@ -26,7 +26,7 @@ public class WagonStatus : MonoBehaviour
 
     private void Start()
     {
-        statusDecreaseRoutine = StartCoroutine(nameof(DecreasePartsStatus));
+        statusDecreaseRoutine = StartCoroutine(DecreasePartsStatus());
     }
 
     private void OnDestroy()
@@ -36,17 +36,23 @@ public class WagonStatus : MonoBehaviour
 
     private IEnumerator DecreasePartsStatus()
     {
-        foreach (var status in parts.Select(part => part.GetComponent<PartStatus>()))
+        while (true)
         {
-            status.DecreasePartHealthBy(partHealthDecrease);
+            foreach (var status in parts.Select(part => part.GetComponent<PartStatus>()))
+            {
+                if (status.health.isDead)
+                {
+                    health.DecreaseBy(wagonHealthDecrease);
+                    continue;
+                }
 
-            if (status.health.isDead)
-                health.DecreaseBy(wagonHealthDecrease);
+                status.DecreasePartHealthBy(partHealthDecrease);
+            }
+
+            if (health.isDead) 
+                onWagonBroken?.Invoke();
+
+            yield return new WaitForSeconds(2f);   
         }
-
-        if (health.isDead)
-            onWagonBroken?.Invoke();
-
-        yield return new WaitForSeconds(2f);
     }
 }

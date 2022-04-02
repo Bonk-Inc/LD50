@@ -12,11 +12,6 @@ public class PartStatus : MonoBehaviour
         health = GetComponent<Health>();
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void DecreasePartHealthBy(float amount)
     {
         health.DecreaseBy(amount * healthDecreaseFactor);
