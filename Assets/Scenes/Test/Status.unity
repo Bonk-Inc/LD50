@@ -477,6 +477,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1373618682028409048, guid: 707b61a9ee657a618881374431f9d500, type: 3}
+      propertyPath: parts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373618682028409048, guid: 707b61a9ee657a618881374431f9d500, type: 3}
+      propertyPath: parts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1805987467}
+    - target: {fileID: 1373618682028409048, guid: 707b61a9ee657a618881374431f9d500, type: 3}
+      propertyPath: parts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1480258970}
+    - target: {fileID: 1373618682028409048, guid: 707b61a9ee657a618881374431f9d500, type: 3}
+      propertyPath: parts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1441465513}
     - target: {fileID: 4096830588817707602, guid: 707b61a9ee657a618881374431f9d500, type: 3}
       propertyPath: maxHealth
       value: 2000

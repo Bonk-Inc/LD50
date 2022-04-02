@@ -6,14 +6,16 @@ using UnityEngine;
 
 public class WagonStatus : MonoBehaviour
 {
-    [SerializeField]
-    private List<GameObject> parts;
+    [SerializeField] 
+    private Wagon wagon;
 
     [SerializeField]
     private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f;
     
     [SerializeField]
     private event Action onWagonBroken;
+
+    private List<GameObject> parts;
 
     public bool isBroken => currentHealth <= 0;
 
@@ -24,6 +26,7 @@ public class WagonStatus : MonoBehaviour
 
     private void Start()
     {
+        parts = wagon.Parts;
         StartCoroutine(DecreasePartsStatus());
     }
 
