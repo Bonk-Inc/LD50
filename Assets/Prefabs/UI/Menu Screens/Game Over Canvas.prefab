@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 4828535100889201268}
   - component: {fileID: 2966845111347327760}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Title (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,8 +273,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Over
+  m_text: "\U0001F602\U0001F602 Game Over \U0001F602\U0001F602"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a5349a86cf3177498328da4c9fd3a21, type: 2}
   m_sharedMaterial: {fileID: 3381106720924266427, guid: 1a5349a86cf3177498328da4c9fd3a21, type: 2}
@@ -620,14 +620,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4292453, g: 0.690073, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 13a71f7d9b65c10ff8f00571f8f438ea, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -939,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5620611157814224957, guid: eea0d10a4c4a60a46beb7b7f7318664b, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 61.2
       objectReference: {fileID: 0}
     - target: {fileID: 5620611158150418352, guid: eea0d10a4c4a60a46beb7b7f7318664b, type: 3}
       propertyPath: m_Pivot.x
