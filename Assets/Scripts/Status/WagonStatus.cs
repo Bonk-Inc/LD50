@@ -14,7 +14,8 @@ public class WagonStatus : MonoBehaviour
     
     [SerializeField]
     private event Action onWagonBroken;
-
+    
+    [SerializeField]
     private List<GameObject> parts;
 
     public bool isBroken => currentHealth <= 0;
