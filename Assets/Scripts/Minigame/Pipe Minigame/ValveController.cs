@@ -10,23 +10,37 @@ public class ValveController : MonoBehaviour
     private SpriteRenderer valveSprite;
 
     [SerializeField] 
-    private Gradient gradientClosed, gradientOpen;
+    private Color colorClosed, colorOpen;
 
     [SerializeField]
     private float animationDuration = 1f;
 
+    public event Action onValveChange;
+
     private float currentTime = 0f;
     
-    private event Action onValveChange;
+    private bool turning = false;
+
+    public ValveStatus getValveStatus => currentStatus;
+    
+    public ValveStatus getCorrectStatus => correctStatus;
     
     private void Start()
     {
         SetValveColor();
     }
 
+    private void Update()
+    {
+        currentTime += Time.deltaTime;
+
+        SetValveColor();
+    }
+
     private void OnMouseDown()
     {
         currentStatus = (currentStatus == ValveStatus.OPEN) ? ValveStatus.CLOSED : ValveStatus.OPEN;
+        turning = true;
         
         SetValveColor();
         onValveChange?.Invoke();
@@ -34,9 +48,9 @@ public class ValveController : MonoBehaviour
 
     private void SetValveColor()
     {
-        var gradient = (currentStatus == ValveStatus.CLOSED) ? gradientClosed : gradientOpen;
+        var currentColor = (currentStatus == ValveStatus.CLOSED) ? colorClosed : colorOpen;
 
-        valveSprite.color = gradient.Evaluate(currentTime / animationDuration);
+        valveSprite.color = currentColor;
     }
 }
 
