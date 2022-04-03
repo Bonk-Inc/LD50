@@ -295,79 +295,6 @@ MonoBehaviour:
   spawnMaxChance: 100
   spawnThreshold: 50
   addedChanceMultiplier: 0.5
---- !u!1001 &1342413159
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2393432112788455749, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_Name
-      value: Nail Minigame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352127339827540266, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8112599329039895380, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3039105
-      objectReference: {fileID: 0}
-    - target: {fileID: 8112599329039895380, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_Size.y
-      value: 2.3194299
-      objectReference: {fileID: 0}
-    - target: {fileID: 8112599329039895380, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.015697233
-      objectReference: {fileID: 0}
-    - target: {fileID: 8112599329039895380, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
-      propertyPath: m_Offset.y
-      value: 3.1389287
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 11a3a56c4242b8c41a83f1991e4ad7c8, type: 3}
 --- !u!4 &1460696553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1622961439178409979, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
@@ -456,6 +383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1741192698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1622961440166661920, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+  m_PrefabInstance: {fileID: 97347930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1835198446 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8166605244789516947, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
@@ -838,3 +770,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff337f7010ed629da222cd000ed2009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &8533301713295293669
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1741192698}
+    m_Modifications:
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.079
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701642, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701643, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_Name
+      value: Nail Minigame Furniture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}

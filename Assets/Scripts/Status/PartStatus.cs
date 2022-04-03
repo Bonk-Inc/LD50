@@ -24,11 +24,13 @@ public class PartStatus : MonoBehaviour
             BreakPart();
     }
 
+    [ContextMenu("Break")]
     public void BreakPart(){
         ChangePart(true);
         OnBreak?.Invoke();
     }
 
+    [ContextMenu("Fix")]
     public void FixPart()
     {
         ChangePart(false);

@@ -324,6 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mask: {fileID: 3800593571098488980}
+  minigameStatus: {fileID: 8619271436822758597}
   hits: 3
 --- !u!1001 &6057868447387422634
 PrefabInstance:
@@ -334,11 +335,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Size.x
-      value: 0.7068659
+      value: 0.3039105
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Size.y
+      value: 2.3194299
       objectReference: {fileID: 0}
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Offset.x
-      value: 0.036730632
+      value: 0.015697233
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.1389287
       objectReference: {fileID: 0}
     - target: {fileID: 6086437487864966464, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,3 +416,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
   m_PrefabInstance: {fileID: 6057868447387422634}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8619271436822758597 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561443134511696751, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+  m_PrefabInstance: {fileID: 6057868447387422634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1549dbae4d8eb4746b42354c9f74a724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
