@@ -73,6 +73,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+--- !u!114 &3062115372035442817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561443134511696751, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+  m_PrefabInstance: {fileID: 716849973362246638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1549dbae4d8eb4746b42354c9f74a724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7027516202624613742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
@@ -133,5 +144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipe Minigame
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8996178567466182039, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: minigameStatus
+      value: 
+      objectReference: {fileID: 3062115372035442817}
+    m_RemovedComponents:
+    - {fileID: 5762621473596444030, guid: f977243115392a6f4b0716141b11b002, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f977243115392a6f4b0716141b11b002, type: 3}
