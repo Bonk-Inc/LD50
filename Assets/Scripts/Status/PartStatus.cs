@@ -14,8 +14,6 @@ public class PartStatus : MonoBehaviour
 
     public float getHealthFactor => healthFactor;
 
-
-
     public void TryBreakPart()
     {
         var random = (int) Random.Range(0, breakFactor);
