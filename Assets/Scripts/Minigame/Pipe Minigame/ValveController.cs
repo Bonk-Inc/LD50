@@ -13,13 +13,13 @@ public class ValveController : MonoBehaviour
     private Color colorClosed, colorOpen;
 
     [SerializeField]
-    private float animationDuration = 1f;
+    private float animationDuration = 1f, rotationSpeed = 2f;
 
     public event Action onValveChange;
 
-    private float currentTime = 0f;
+    private float currentTime;
     
-    private bool turning = false;
+    private bool turning;
 
     public ValveStatus getValveStatus => currentStatus;
     
@@ -27,30 +27,46 @@ public class ValveController : MonoBehaviour
     
     private void Start()
     {
-        SetValveColor();
+        valveSprite.color = (currentStatus == ValveStatus.CLOSED) ? colorClosed : colorOpen;
     }
 
     private void Update()
     {
+        if (!turning)
+            return;
+        
         currentTime += Time.deltaTime;
+        var t = currentTime * 0.5f;
 
-        SetValveColor();
+        SetValveColor(t);
+        RotateValve();
+
+        if (t >= animationDuration)
+            turning = false;
     }
 
     private void OnMouseDown()
     {
         currentStatus = (currentStatus == ValveStatus.OPEN) ? ValveStatus.CLOSED : ValveStatus.OPEN;
+        currentTime = 0f;
         turning = true;
         
-        SetValveColor();
         onValveChange?.Invoke();
     }
 
-    private void SetValveColor()
+    private void SetValveColor(float time)
     {
-        var currentColor = (currentStatus == ValveStatus.CLOSED) ? colorClosed : colorOpen;
+        var colorBegin = (currentStatus == ValveStatus.CLOSED) ? colorOpen : colorClosed;
+        var colorTarget = (currentStatus == ValveStatus.CLOSED) ? colorClosed : colorOpen;
 
-        valveSprite.color = currentColor;
+        valveSprite.color = Color.Lerp(colorBegin, colorTarget, time);
+    }
+
+    private void RotateValve()
+    {
+        var speed = (currentStatus == ValveStatus.CLOSED) ? rotationSpeed : -rotationSpeed;
+        
+        transform.Rotate(0, 0, speed);
     }
 }
 
