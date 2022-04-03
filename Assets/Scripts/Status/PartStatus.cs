@@ -14,15 +14,21 @@ public class PartStatus : MonoBehaviour
 
     public float getHealthFactor => healthFactor;
 
+    public event Action<bool> OnPartChanged;
+
     public void TryBreakPart()
     {
         var random = (int) Random.Range(0, breakFactor);
-        if (random == 1)
-            broken = true;
+        if (random == 1) ChangePart(true);
     }
 
     public void FixPart()
     {
-        broken = false;
+        ChangePart(false);
+    }
+
+    private void ChangePart(bool broke) {
+        broken = broke;
+        OnPartChanged?.Invoke(broke);
     }
 }

@@ -1334,6 +1334,7 @@ GameObject:
   - component: {fileID: 503602738}
   - component: {fileID: 503602739}
   - component: {fileID: 503602740}
+  - component: {fileID: 1130123778}
   m_Layer: 0
   m_Name: Furnace Minigame
   m_TagString: Interactible
@@ -1432,6 +1433,22 @@ MonoBehaviour:
   gamePart: {fileID: 503602738}
   minigamePrefab: {fileID: 60551805845576960, guid: f1554c943082d7e419092c5c9fc92acc, type: 3}
   interaction: {fileID: 503602739}
+--- !u!114 &1130123778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193473849086839656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0c6fdf5346d0d4b8aff276c0ecf9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: {fileID: 503602738}
+  partRenderer: {fileID: 4029760300862882183}
+  brokenSprite: {fileID: 21300000, guid: 84119830af6fe1847a4d844e7210b205, type: 3}
+  fixedSprite: {fileID: 21300000, guid: a5e4723873abdf547bb0e836db04bc93, type: 3}
 --- !u!1001 &3085210591088867266
 PrefabInstance:
   m_ObjectHideFlags: 0
