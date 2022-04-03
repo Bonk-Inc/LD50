@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1622961439178409979}
   - component: {fileID: 1622961439178409980}
-  - component: {fileID: 428684142}
   - component: {fileID: 428684145}
   m_Layer: 0
   m_Name: Wagon
@@ -90,19 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &428684142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622961439178409981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5800a3b8a1ff392afe4fd23bdb8f3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parts: []
 --- !u!114 &428684145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff337f7010ed629da222cd000ed2009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wagon: {fileID: 428684142}
   maxHealth: 100
   currentHealth: 0
   wagonHealthDecrease: 20
