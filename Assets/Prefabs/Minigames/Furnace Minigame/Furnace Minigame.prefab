@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266fb6a467dd0924891e78951df8572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  status: {fileID: 60551805845576960}
   cather: {fileID: 776401798}
 --- !u!114 &776401798
 MonoBehaviour:
@@ -655,6 +656,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+--- !u!114 &60551805845576960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561443134511696751, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+  m_PrefabInstance: {fileID: 2547644850585589359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232418851772307584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1549dbae4d8eb4746b42354c9f74a724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5417565362180679919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
