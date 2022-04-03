@@ -10,14 +10,13 @@ public class WagonStatus : MonoBehaviour
     private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f, decreaseDelay = 1f;
     
     [SerializeField]
-    private event Action onWagonBroken;
-    
-    [SerializeField]
     private List<PartStatus> parts;
 
     public bool isBroken => currentHealth <= 0;
 
     public float MaxHealth => maxHealth;
+
+    public event Action OnWagonBroken;
 
     public event Action<float> OnHealthChanged;
 
@@ -48,7 +47,7 @@ public class WagonStatus : MonoBehaviour
                 allFixed = false;
                 DecreaseHealth(status.getHealthFactor);
                 
-                if (isBroken) onWagonBroken?.Invoke();
+                if (isBroken) OnWagonBroken?.Invoke();
             }
 
             if(allFixed) IncreaseHealth(1);

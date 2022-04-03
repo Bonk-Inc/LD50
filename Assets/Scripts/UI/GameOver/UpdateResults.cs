@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class UpdateResults : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     private Timer timer;
-    [SerializeField]
+    
+    [SerializeField] 
     private TMP_Text resultText;
-    private void Awake() {
-        timer.OnTimeUpdate += UpdateText; // TODO Should be OnGameFinish instead of OnTimeUpdate
+
+    private void Awake()
+    {
+        timer.OnGameFinish += SetText;
     }
 
-    private void UpdateText(float time) {
+    private void SetText(float time)
+    {
         resultText.text = "You survived for " + time + " seconds";
     }
 }

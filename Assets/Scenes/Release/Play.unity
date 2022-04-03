@@ -188,6 +188,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+--- !u!114 &97347931 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 428684145, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+  m_PrefabInstance: {fileID: 97347930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff337f7010ed629da222cd000ed2009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128695547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9108830356756324356, guid: 60aa8c81411d2474ab7d2e1d0f425c66, type: 3}
@@ -537,6 +548,7 @@ GameObject:
   - component: {fileID: 2056697673}
   - component: {fileID: 2056697676}
   - component: {fileID: 2056697677}
+  - component: {fileID: 2056697678}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -637,6 +649,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeOfSecond: 1
+  gameOverPrefab: {fileID: 128695547}
+--- !u!114 &2056697678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056697672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8a187d956741bdbd48a6fde1a17337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wagons:
+  - {fileID: 6398093669780637435}
+  - {fileID: 97347931}
+  timer: {fileID: 2056697677}
 --- !u!114 &2111789528 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2966845111347327760, guid: 60aa8c81411d2474ab7d2e1d0f425c66, type: 3}
@@ -705,3 +734,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+--- !u!114 &6398093669780637435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 57347809610326191, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+  m_PrefabInstance: {fileID: 6398093669780637434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff337f7010ed629da222cd000ed2009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
