@@ -5,7 +5,10 @@ public class PipeMinigame : MonoBehaviour
 {
     [SerializeField]
     private List<ValveController> valves;
-    
+
+    [SerializeField]
+    private MinigameStatus minigameStatus;
+
     private void Awake()
     {
         foreach (var valve in valves)
@@ -16,8 +19,8 @@ public class PipeMinigame : MonoBehaviour
     {
         if (!valvesInCorrectPosition)
             return;
-        
-        Debug.Log("Completed");
+
+        minigameStatus.CompleteMinigame();
     }
 
     private bool valvesInCorrectPosition => 
