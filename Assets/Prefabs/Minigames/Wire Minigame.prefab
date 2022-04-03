@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 6538327131014752562}
+  winCheck: {fileID: 1614474022}
   color: 0
   hasLine: 0
 --- !u!58 &816967642541571972
@@ -390,6 +391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465466314772148311}
   - component: {fileID: 8690338172422857657}
+  - component: {fileID: 1614474022}
   m_Layer: 0
   m_Name: drawer
   m_TagString: Untagged
@@ -427,6 +429,24 @@ MonoBehaviour:
   lr: {fileID: 0}
   cam: {fileID: 4005543377547599488}
   currentDragPoint: {fileID: 0}
+--- !u!114 &1614474022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914443809702631975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6befbf064dbfc46bd343a5c713c14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 4202138092210088579}
+  - {fileID: 2103226852168804311}
+  - {fileID: 2898792415996703}
+  - {fileID: 2943807642602123431}
+  status: {fileID: 4642578080396064942}
 --- !u!1 &929916274082235580
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 3649190087622415337}
+  winCheck: {fileID: 1614474022}
   color: 1
   hasLine: 0
 --- !u!58 &8666979437662078847
@@ -645,6 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 6538327131014752562}
+  winCheck: {fileID: 1614474022}
   color: 0
   hasLine: 0
 --- !u!58 &3770176635486744885
@@ -763,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 7132683000209696200}
+  winCheck: {fileID: 1614474022}
   color: 2
   hasLine: 0
 --- !u!58 &7874997326693118961
@@ -794,7 +817,7 @@ GameObject:
   - component: {fileID: 6513860978967146526}
   - component: {fileID: 4454178282398530033}
   m_Layer: 0
-  m_Name: Yellow bottom (1)
+  m_Name: Green bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,6 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 6229393653659730944}
+  winCheck: {fileID: 1614474022}
   color: 3
   hasLine: 0
 --- !u!58 &4454178282398530033
@@ -1034,6 +1058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 6229393653659730944}
+  winCheck: {fileID: 1614474022}
   color: 3
   hasLine: 0
 --- !u!58 &6316946576080301352
@@ -1283,6 +1308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 3649190087622415337}
+  winCheck: {fileID: 1614474022}
   color: 1
   hasLine: 0
 --- !u!58 &5199415323710978006
@@ -1605,6 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawer: {fileID: 8690338172422857657}
   line: {fileID: 7132683000209696200}
+  winCheck: {fileID: 1614474022}
   color: 2
   hasLine: 0
 --- !u!58 &3748982379014026125
@@ -1632,7 +1659,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Size.x
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Size.y
@@ -1647,6 +1674,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6086437487864966464, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086437487864966464, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1657,6 +1688,14 @@ PrefabInstance:
     - target: {fileID: 6086437487864966464, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086437487864966465, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: orthographic size
+      value: 6.3603926
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086437488097234496, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7452425851284768354, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Layer
@@ -1672,7 +1711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -34.02
       objectReference: {fileID: 0}
     - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1730,3 +1769,14 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6086437487864966465, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
   m_PrefabInstance: {fileID: 7197265535219495873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4642578080396064942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561443134511696751, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+  m_PrefabInstance: {fileID: 7197265535219495873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1549dbae4d8eb4746b42354c9f74a724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

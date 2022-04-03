@@ -12,6 +12,9 @@ public class WirePoint : MonoBehaviour
     private LineRenderer line;
 
     [SerializeField]
+    private WireWin winCheck;
+
+    [SerializeField]
     private PointColor color;
 
     public bool hasLine;
@@ -50,6 +53,8 @@ public class WirePoint : MonoBehaviour
                 transform.position
             });
             hasLine = true;
+            drawer.currentDragPoint.hasLine = true;
+            winCheck.CheckWin();
         } else {
             drawer.currentDragPoint.line.enabled = false;
         }
