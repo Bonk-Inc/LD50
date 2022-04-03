@@ -220,6 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePart: {fileID: 503602738}
   minigamePrefab: {fileID: 60551805845576960, guid: f1554c943082d7e419092c5c9fc92acc, type: 3}
+  interaction: {fileID: 503602739}
 --- !u!4 &619095452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}

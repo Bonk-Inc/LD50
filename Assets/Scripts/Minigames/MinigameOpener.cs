@@ -11,6 +11,9 @@ public class MinigameOpener : MonoBehaviour
     [SerializeField]
     private MinigameStatus minigamePrefab;
 
+    [SerializeField]
+    private MinigameInteraction interaction;
+
     private MinigameStatus currentMinigame;
 
     public void Open(){
@@ -26,11 +29,12 @@ public class MinigameOpener : MonoBehaviour
     private void OnMinigameFinished(){
         CloseMinigame();
         gamePart.FixPart();
+        interaction.LeaveInteract();
     }
 
     private void CloseMinigame(){
         currentMinigame.OnCompleteMinigame -= OnMinigameFinished;
-        Destroy(currentMinigame);
+        Destroy(currentMinigame.gameObject);
     }
 
 
