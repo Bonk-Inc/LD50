@@ -8,14 +8,17 @@ public class WagonStatus : MonoBehaviour
 {
     [SerializeField]
     private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f;
-    
-    [SerializeField]
-    private event Action onWagonBroken;
-    
+
     [SerializeField]
     private List<GameObject> parts;
 
     public bool isBroken => currentHealth <= 0;
+
+    public float MaxHealth => maxHealth;
+
+    public event Action OnWagonBroken;
+
+    public event Action<float> OnHealthChanged;
 
     private void Awake()
     {
@@ -41,9 +44,9 @@ public class WagonStatus : MonoBehaviour
                 }
                 
                 DecreaseHealth(status.getHealthFactor);
-                
+
                 if (isBroken)
-                    onWagonBroken?.Invoke();
+                    OnWagonBroken?.Invoke();
             }
 
             yield return new WaitForSeconds(2f);   
@@ -53,15 +56,16 @@ public class WagonStatus : MonoBehaviour
     private void DecreaseHealth(float decreaseFactor)
     {
         var newHealth = currentHealth - (wagonHealthDecrease * decreaseFactor);
-        Debug.Log(newHealth);
         
-        currentHealth = (currentHealth <= 0f) ? 0f : newHealth;
+        currentHealth = Mathf.Max(newHealth, 0);
+        OnHealthChanged?.Invoke(currentHealth);
     }
 
     private void IncreaseHealth(float increaseFactor)
     {
         var newHealth = currentHealth + (wagonHealthIncrease * increaseFactor);
         
-        currentHealth = (currentHealth <= maxHealth) ? maxHealth : newHealth;
+        currentHealth = Mathf.Min(newHealth, maxHealth);
+        OnHealthChanged?.Invoke(currentHealth);
     }
 }
