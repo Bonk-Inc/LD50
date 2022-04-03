@@ -78,6 +78,12 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+
+    private void OnDisable() {
+        anim.SetBool("IsWalking", false);
+        sprite.flipX = false;
+        rb.velocity = Vector2.zero;
+    }
 }
 
 public enum MoveStatus

@@ -7,13 +7,13 @@ using UnityEngine;
 public class WagonStatus : MonoBehaviour
 {
     [SerializeField]
-    private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f;
+    private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f, decreaseDelay = 1f;
     
     [SerializeField]
     private event Action onWagonBroken;
     
     [SerializeField]
-    private List<GameObject> parts;
+    private List<PartStatus> parts;
 
     public bool isBroken => currentHealth <= 0;
 
@@ -35,22 +35,23 @@ public class WagonStatus : MonoBehaviour
     {
         while (true)
         {
-            foreach (var status in parts.Select(part => part.GetComponent<PartStatus>()))
+            var allFixed = true;
+            foreach (var status in parts)
             {
                 if (!status.isBroken)
                 {
-                    status.TryBreakPart();
-                    IncreaseHealth(status.getHealthFactor);
+                    status.TryBreakPart(); // TODO Change this to a different system later on.
                     continue; 
                 }
-                
+                allFixed = false;
                 DecreaseHealth(status.getHealthFactor);
                 
-                if (isBroken)
-                    onWagonBroken?.Invoke();
+                if (isBroken) onWagonBroken?.Invoke();
             }
 
-            yield return new WaitForSeconds(2f);   
+            if(allFixed) IncreaseHealth(1);
+
+            yield return new WaitForSeconds(decreaseDelay);   
         }
     }
 
@@ -58,7 +59,7 @@ public class WagonStatus : MonoBehaviour
     {
         var newHealth = currentHealth - (wagonHealthDecrease * decreaseFactor);
         
-        currentHealth = (currentHealth <= 0f) ? 0f : newHealth;
+        currentHealth = Math.Max(newHealth, 0);
         OnHealthChanged?.Invoke(currentHealth);
     }
 
@@ -66,7 +67,7 @@ public class WagonStatus : MonoBehaviour
     {
         var newHealth = currentHealth + (wagonHealthIncrease * increaseFactor);
         
-        currentHealth = (currentHealth <= maxHealth) ? maxHealth : newHealth;
+        currentHealth = Math.Min(newHealth, maxHealth);
         OnHealthChanged?.Invoke(currentHealth);
     }
 }
