@@ -9,23 +9,12 @@ public class PartStatus : MonoBehaviour
 
     [SerializeField] 
     private bool broken = false;
-
-    [SerializeField] 
-    private MinigameStatus minigameStatus;
     
     public bool isBroken => broken;
 
     public float getHealthFactor => healthFactor;
 
-    private void Awake()
-    {
-        minigameStatus.OnCompleteMinigame += FixPart;
-    }
 
-    private void OnDestroy()
-    {
-        minigameStatus.OnCompleteMinigame -= FixPart;
-    }
 
     public void TryBreakPart()
     {
@@ -34,7 +23,7 @@ public class PartStatus : MonoBehaviour
             broken = true;
     }
 
-    private void FixPart()
+    public void FixPart()
     {
         broken = false;
     }

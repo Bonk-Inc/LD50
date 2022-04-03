@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CameraFocus
   - Interactible
+  - Throwable
   layers:
   - Default
   - TransparentFX

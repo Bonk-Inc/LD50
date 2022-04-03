@@ -142,6 +142,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 2056697677}
   resultText: {fileID: 2111789528}
+--- !u!1 &503602734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8193473849086839656, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+  m_PrefabInstance: {fileID: 6398093669780637434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &503602736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503602734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.20999175, y: -0.13577965}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4199829, y: 0.7284407}
+  m_EdgeRadius: 0
+--- !u!114 &503602738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503602734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthFactor: 1
+  breakFactor: 50
+  broken: 0
+--- !u!114 &503602739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503602734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5685032dd7494c47b10f16b4eac0832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 2060337084}
+  - {fileID: 1237907033}
+  highlightColor: {r: 0, g: 1, b: 0, a: 1}
+  status: {fileID: 503602738}
+  opener: {fileID: 503602740}
+--- !u!114 &503602740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503602734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13727eb177454304196f19ab03cb992a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamePart: {fileID: 503602738}
+  minigamePrefab: {fileID: 60551805845576960, guid: f1554c943082d7e419092c5c9fc92acc, type: 3}
 --- !u!4 &619095452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
@@ -244,6 +322,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6437215836826015438, guid: 49e8dafb21add0d4bb9bf14c02a9d501, type: 3}
   m_PrefabInstance: {fileID: 1201548585}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1237907033 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2963714455380324204, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+  m_PrefabInstance: {fileID: 6398093669780637434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1574319858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,7 +419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bb7bb9b4faeb946b2e48b5439dfd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1735239575}
+  spriteRenderers: []
+  highlightColor: {r: 0, g: 1, b: 0, a: 1}
+  status: {fileID: 0}
 --- !u!212 &1735239575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -766,6 +851,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeOfSecond: 1
+--- !u!212 &2060337084 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4029760300862882183, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+  m_PrefabInstance: {fileID: 6398093669780637434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2111789528 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2966845111347327760, guid: 60aa8c81411d2474ab7d2e1d0f425c66, type: 3}
@@ -846,6 +936,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 797678215}
     m_Modifications:
+    - target: {fileID: 6398093668958168294, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: m_Size.x
+      value: 0.87877095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398093668958168294, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.041771337
+      objectReference: {fileID: 0}
     - target: {fileID: 6398093670370108257, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_Name
       value: Front Train
@@ -893,6 +991,14 @@ PrefabInstance:
     - target: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193473849086839656, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: m_Name
+      value: Furnace Minigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193473849086839656, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: m_TagString
+      value: Interactible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
