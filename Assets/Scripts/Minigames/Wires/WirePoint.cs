@@ -12,6 +12,9 @@ public class WirePoint : MonoBehaviour
     private LineRenderer line;
 
     [SerializeField]
+    private WireWin winCheck;
+
+    [SerializeField]
     private PointColor color;
 
     public bool hasLine;
@@ -39,22 +42,20 @@ public class WirePoint : MonoBehaviour
     }
 
     private void MouseUp() {
-        Debug.Log(drawer.currentDragPoint);
 
         if(drawer.currentDragPoint == this || drawer.currentDragPoint == null){
-            Debug.Log("this aint good");
             return;
         }
 
         if(drawer.currentDragPoint.color == color){
-            Debug.Log("this do be good");
             line.SetPositions(new Vector3[] {
                 drawer.currentDragPoint.transform.position,
                 transform.position
             });
             hasLine = true;
+            drawer.currentDragPoint.hasLine = true;
+            winCheck.CheckWin();
         } else {
-            Debug.Log("this do be weird");
             drawer.currentDragPoint.line.enabled = false;
         }
 
