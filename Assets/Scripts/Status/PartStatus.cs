@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PartStatus : MonoBehaviour
 {
@@ -7,10 +9,12 @@ public class PartStatus : MonoBehaviour
 
     [SerializeField] 
     private bool broken = false;
-
+    
     public bool isBroken => broken;
 
     public float getHealthFactor => healthFactor;
+
+
 
     public void TryBreakPart()
     {

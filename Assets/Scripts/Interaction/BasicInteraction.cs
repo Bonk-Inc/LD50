@@ -6,16 +6,32 @@ public abstract class BasicInteraction : Interactible
 {
 
     [SerializeField]
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderers;
 
+    [SerializeField]
+    private Color highlightColor = Color.green;
+
+    [SerializeField]
+    protected PartStatus status;
     public override void EnterInteract()
     {
-        spriteRenderer.color = Color.green;
+        if(!status.isBroken){
+            return;
+        }
+        
+        SetRendererColor(highlightColor);
     }
 
     public override void LeaveInteract()
     {
-        spriteRenderer.color = Color.white;
+        SetRendererColor(Color.white);
+    }
+
+    private void SetRendererColor(Color color){
+        foreach (var renderer in spriteRenderers)
+        {
+            renderer.color = color;
+        }
     }
 
 }
