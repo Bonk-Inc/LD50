@@ -12,7 +12,7 @@ public class WireDrawer : MonoBehaviour
 
     public WirePoint currentDragPoint;
 
-    private void Update() {
+    private void LateUpdate() {
         if(currentDragPoint == null || lr == null){
             return;
         }
