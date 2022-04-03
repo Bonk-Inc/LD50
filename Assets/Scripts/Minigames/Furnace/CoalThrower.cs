@@ -11,14 +11,19 @@ public class CoalThrower : MonoBehaviour
     private Rigidbody2D shootable;
 
     [SerializeField]
-    private Transform shootingPoint;
+    private Transform shootingPoint, coalParent;
+
+    [SerializeField]
+    private float forceAmount;
 
     private void Awake() {
         miniInput.OnTrigger += ThrowCoal;
     }
 
     private void ThrowCoal() {
-        Instantiate(shootable, shootingPoint);
-        print("I just threw a piece of coal!");
+        var coal = Instantiate(shootable, coalParent);
+        coal.position = shootingPoint.position;
+        var forceBig = shootingPoint.forward * forceAmount;
+        coal.AddForce(shootingPoint.right * forceAmount, ForceMode2D.Impulse);
     }
 }

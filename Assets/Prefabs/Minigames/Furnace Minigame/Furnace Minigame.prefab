@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2119033280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119033281}
+  m_Layer: 0
+  m_Name: Coals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119033281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119033280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5417565362180679919}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3154810304292702522
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,12 +161,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06619ce8e7a6d4f418e65b11e0fb811e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameStatus: {fileID: 0}
   arrow: {fileID: 1338907802060996268}
-  topAngle: 100
-  bottomAngle: 300
-  speed: 100
-  margin: 20
-  minigameStatus: {fileID: 310253313}
+  speed: 150
+  topAngle: 180
+  bottomAngle: 0
+  padding: 75
 --- !u!114 &1544766243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,8 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniInput: {fileID: 310253315}
-  shootable: {fileID: 0}
+  shootable: {fileID: 1093789994210612390, guid: affff7e68040e06419a2ecf3434a65f2, type: 3}
   shootingPoint: {fileID: 5576783279723159123}
+  coalParent: {fileID: 2119033281}
+  forceAmount: 20
 --- !u!1 &4444048612713095903
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +195,7 @@ GameObject:
   - component: {fileID: 5735740344625094419}
   - component: {fileID: 1965452006815366018}
   m_Layer: 0
-  m_Name: Coal
+  m_Name: Papi Coal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,6 +364,9 @@ GameObject:
   - component: {fileID: 2585358417041466626}
   - component: {fileID: 4761817340656646202}
   - component: {fileID: 8637005413093384419}
+  - component: {fileID: 776401799}
+  - component: {fileID: 776401797}
+  - component: {fileID: 776401798}
   m_Layer: 0
   m_Name: Furnace
   m_TagString: Untagged
@@ -418,7 +454,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.14519453}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -429,8 +465,55 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.72}
+  m_Size: {x: 0.29, y: 0.42961097}
   m_EdgeRadius: 0
+--- !u!50 &776401799
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8736258807545266549}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &776401797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8736258807545266549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266fb6a467dd0924891e78951df8572f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cather: {fileID: 776401798}
+--- !u!114 &776401798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8736258807545266549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71ec7d7295bb57438b3dbdeabe210c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Throwable
 --- !u!1001 &2547644850585589359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -582,18 +665,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8441701263021166319, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
   m_PrefabInstance: {fileID: 2547644850585589359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &310253313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6232418851772307584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1549dbae4d8eb4746b42354c9f74a724, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &310253315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,4 +677,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c150fde211169a9438a22b4a0e4d9669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAfter: 3
+  delayAfter: 1
