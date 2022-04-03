@@ -21,5 +21,6 @@ public class MinigameCameraFitter : MonoBehaviour
     {
         fitter.SetObject(bounds);
         cam.orthographicSize = fitter.CalculateCameraSize();
+        transform.position = fitter.CalculateCameraPosition().ToVector3(transform.position.z);
     }
 }
