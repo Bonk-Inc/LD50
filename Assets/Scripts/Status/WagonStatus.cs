@@ -20,6 +20,10 @@ public class WagonStatus : MonoBehaviour
 
     public bool isBroken => currentHealth <= 0;
 
+    public float MaxHealth => maxHealth;
+
+    public event Action<float> OnHealthChanged;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -57,9 +61,9 @@ public class WagonStatus : MonoBehaviour
     private void DecreaseHealth(float decreaseFactor)
     {
         var newHealth = currentHealth - (wagonHealthDecrease * decreaseFactor);
-        Debug.Log(newHealth);
         
         currentHealth = (currentHealth <= 0f) ? 0f : newHealth;
+        OnHealthChanged?.Invoke(currentHealth);
     }
 
     private void IncreaseHealth(float increaseFactor)
@@ -67,5 +71,6 @@ public class WagonStatus : MonoBehaviour
         var newHealth = currentHealth + (wagonHealthIncrease * increaseFactor);
         
         currentHealth = (currentHealth <= maxHealth) ? maxHealth : newHealth;
+        OnHealthChanged?.Invoke(currentHealth);
     }
 }
