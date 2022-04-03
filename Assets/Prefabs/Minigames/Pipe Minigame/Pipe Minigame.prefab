@@ -72,6 +72,10 @@ MonoBehaviour:
   - {fileID: 2173326350546382239}
   - {fileID: 2173326351847457523}
   - {fileID: 2173326351006628516}
+<<<<<<< HEAD
+=======
+  minigameStatus: {fileID: 5762621473596444030}
+>>>>>>> main
 --- !u!114 &5762621473596444030
 MonoBehaviour:
   m_ObjectHideFlags: 0

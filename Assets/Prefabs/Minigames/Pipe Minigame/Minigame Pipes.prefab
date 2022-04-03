@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &716849973362246638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0480958
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Size.y
+      value: 16.589935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.21769625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.039901733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441701263021166319, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+      propertyPath: m_Name
+      value: Minigame Pipes
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+--- !u!4 &7027516202624613742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7526644725755723392, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
+  m_PrefabInstance: {fileID: 716849973362246638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4275338490114325388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7027516202624613742}
+    m_Modifications:
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182032, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996178567466182038, guid: f977243115392a6f4b0716141b11b002, type: 3}
+      propertyPath: m_Name
+      value: Pipe Minigame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f977243115392a6f4b0716141b11b002, type: 3}
