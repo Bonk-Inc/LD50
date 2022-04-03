@@ -20,6 +20,8 @@ public class WagonStatus : MonoBehaviour
 
     public event Action<float> OnHealthChanged;
 
+    public List<PartStatus> Parts => parts;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -39,7 +41,7 @@ public class WagonStatus : MonoBehaviour
             {
                 if (!status.isBroken)
                 {
-                    status.TryBreakPart(); // TODO Change this to a different system later on.
+                    // status.TryBreakPart(); // TODO Change this to a different system later on.
                     continue; 
                 }
                 allFixed = false;
