@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ValveController : MonoBehaviour
 {
@@ -25,8 +26,10 @@ public class ValveController : MonoBehaviour
     
     public ValveStatus getCorrectStatus => correctStatus;
     
-    private void Start()
+    private void Awake()
     {
+        RandomlySetValveStatus();
+        
         valveSprite.color = (currentStatus == ValveStatus.CLOSED) ? colorClosed : colorOpen;
     }
 
@@ -67,6 +70,13 @@ public class ValveController : MonoBehaviour
         var speed = (currentStatus == ValveStatus.CLOSED) ? rotationSpeed : -rotationSpeed;
         
         transform.Rotate(0, 0, speed);
+    }
+
+    private void RandomlySetValveStatus()
+    {
+        var random = Random.Range(0, 3);
+
+        currentStatus = (random == 1) ? ValveStatus.CLOSED : ValveStatus.OPEN;
     }
 }
 
