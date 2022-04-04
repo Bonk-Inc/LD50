@@ -56,6 +56,8 @@ public class DayTracker : MonoBehaviour {
 
     private void OnGameFinished(float timeSurvived) {
         OnGameFinish?.Invoke(daysSurvived, currentDay);
+        timer.StopTimer();
+        Time.timeScale = 0;
     }
 
     private Tuple<int, Day> CalculateDay(float timeSurvived) {

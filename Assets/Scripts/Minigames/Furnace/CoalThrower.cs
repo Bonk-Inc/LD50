@@ -9,6 +9,9 @@ public class CoalThrower : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D shootable;
+    
+    [SerializeField]
+    private PlaySound sound;
 
     [SerializeField]
     private Transform shootingPoint, coalParent;
@@ -21,6 +24,7 @@ public class CoalThrower : MonoBehaviour
     }
 
     private void ThrowCoal() {
+        sound.PlayClip();
         var coal = Instantiate(shootable, coalParent);
         coal.position = shootingPoint.position;
         var forceBig = shootingPoint.forward * forceAmount;

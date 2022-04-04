@@ -9,6 +9,9 @@ public class PipeMinigame : MonoBehaviour
     [SerializeField]
     private MinigameStatus minigameStatus;
 
+    [SerializeField]
+    private PlaySound sound;
+
     private void Awake()
     {
         foreach (var valve in valves)
@@ -17,6 +20,7 @@ public class PipeMinigame : MonoBehaviour
 
     private void HandleValveStatusChange()
     {
+        sound.PlayClip();
         if (!valvesInCorrectPosition)
             return;
 

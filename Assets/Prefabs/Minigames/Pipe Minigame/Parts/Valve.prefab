@@ -101,8 +101,8 @@ MonoBehaviour:
   currentStatus: 0
   correctStatus: 0
   valveSprite: {fileID: 4376843062127997528}
-  colorClosed: {r: 0.42745098, g: 0.42745098, b: 0.42745098, a: 1}
-  colorOpen: {r: 1, g: 1, b: 1, a: 1}
+  colorClosed: {r: 0.3584906, g: 0.3094518, b: 0.3094518, a: 1}
+  colorOpen: {r: 0.69066024, g: 0.9716981, b: 0.6554379, a: 1}
   animationDuration: 1
   rotationSpeed: 2
 --- !u!61 &7514345895995342989
