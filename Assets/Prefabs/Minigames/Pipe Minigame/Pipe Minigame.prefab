@@ -884,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.47
+      value: -4.101
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalPosition.z
@@ -892,19 +892,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -916,7 +916,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3308592880354152350, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408220322072995979, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408220322072995979, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ee65b26cfc2212dfaaaaf9c09dfa08d, type: 3}
+    - target: {fileID: 8408220322072995979, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cab88ed9e2f4c309b00537c17f4e399, type: 3}
@@ -1571,6 +1583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Middle vertical pipe
       objectReference: {fileID: 0}
+    - target: {fileID: 8398403389760238519, guid: adbc912ff5bdd11ff9c0302081879903, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67bbb03f2be54b0419647731a79b6049, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adbc912ff5bdd11ff9c0302081879903, type: 3}
 --- !u!4 &600605875454673068 stripped
