@@ -654,10 +654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 301008273}
     m_Modifications:
-    - target: {fileID: 7102241136198064678, guid: a2dc438d653fbbc47bedb551cb2e2e39, type: 3}
-      propertyPath: healthFactor
-      value: 0.066
-      objectReference: {fileID: 0}
     - target: {fileID: 7102241136198064684, guid: a2dc438d653fbbc47bedb551cb2e2e39, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2051,11 +2047,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9307c9dad79523649be6277bc5dae4bf, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0b2a431bff11a2f4981dfdeda4553178, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 09c373381b73c1a45994041b27f86b3d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
