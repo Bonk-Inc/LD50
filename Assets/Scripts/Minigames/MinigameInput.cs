@@ -5,6 +5,9 @@ using UnityEngine;
 public class MinigameInput : MonoBehaviour
 {
     [SerializeField]
+    private InputChecker inputCheck;
+
+    [SerializeField]
     private float delayAfter = 3;
 
     private bool canTrigger = true;
@@ -12,7 +15,7 @@ public class MinigameInput : MonoBehaviour
     public event Action OnTrigger;
 
     private void Update() {
-        if(canTrigger && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))) {
+        if(canTrigger && (inputCheck.BasicKeyInteraction() || inputCheck.BasicMouseInteraction())) {
             StartCoroutine("Shoot");
         }
     }
