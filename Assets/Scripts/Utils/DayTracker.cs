@@ -26,6 +26,9 @@ public class DayTracker : MonoBehaviour {
     private int daysSurvived = 0;
     private Day currentDay;
 
+    public float SecondsInDay => secondsInDay;
+    public Day StartDay => startDay;
+
     public event Action<int, Day> OnGameFinish;
 
     public event Action<float> OnTimeUpdated;
@@ -43,9 +46,7 @@ public class DayTracker : MonoBehaviour {
         
         var dayInfo = CalculateDay(timeSurvived);
         
-        print("AAAH LEKKER HAM KAAS");
         if(!currentDay.Equals(dayInfo.Item2)) {
-            print(dayInfo.Item1 + "  " + dayInfo.Item2);
             daysSurvived = dayInfo.Item1;
             currentDay = dayInfo.Item2;
 
@@ -54,7 +55,7 @@ public class DayTracker : MonoBehaviour {
     }
 
     private void OnGameFinished(float timeSurvived) {
-        OnGameFinish?.Invoke(daysSurvived, Day.Monday);
+        OnGameFinish?.Invoke(daysSurvived, currentDay);
     }
 
     private Tuple<int, Day> CalculateDay(float timeSurvived) {
