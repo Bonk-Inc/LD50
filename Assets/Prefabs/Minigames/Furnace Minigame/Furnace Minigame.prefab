@@ -163,8 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameStatus: {fileID: 0}
   arrow: {fileID: 1338907802060996268}
-  speed: 150
-  topAngle: 180
+  speed: 180
+  topAngle: 200
   bottomAngle: 0
   padding: 75
 --- !u!114 &1544766243
@@ -382,8 +382,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8736258807545266549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.84, y: -2.08, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: 15.5, y: 1.13, z: 0}
+  m_LocalScale: {x: 16, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5417565362180679919}
@@ -454,7 +454,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0017282367, y: -0.00434345}
+  m_Offset: {x: -0.013505757, y: -0.14505303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -465,7 +465,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.400607, y: 0.7113131}
+  m_Size: {x: 0.22828424, y: 0.37782454}
   m_EdgeRadius: 0
 --- !u!50 &776401799
 Rigidbody2D:
@@ -524,7 +524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Size.x
-      value: 2.394682
+      value: 2.6940799
       objectReference: {fileID: 0}
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Size.y
@@ -532,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Offset.x
-      value: -0.02115947
+      value: 0.1285395
       objectReference: {fileID: 0}
     - target: {fileID: 2631335124602307838, guid: 59d689325f2899d4b9f87825ee127a6c, type: 3}
       propertyPath: m_Offset.y
