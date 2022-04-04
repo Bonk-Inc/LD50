@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FocusInitter : MonoBehaviour
+public class FocusInitter3d : MonoBehaviour
 {
     [SerializeField]
     private CameraFocus focus;
     
     [SerializeField]
-    private Collider2D startFocus, focusNoQuit;
+    private Collider startFocus;
 
     private void Start()
     {
-#if UNITY_EDITOR || UNITY_WEBGL
-        startFocus = focusNoQuit;
-#endif
-        focus.Focus(startFocus);
+        focus.Focus(startFocus.bounds);
     }
 }
