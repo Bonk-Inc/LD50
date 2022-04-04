@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FocusInitter : MonoBehaviour
+public class MenuFocus : MonoBehaviour
 {
     [SerializeField]
     private CameraFocus focus;
@@ -10,11 +10,11 @@ public class FocusInitter : MonoBehaviour
     [SerializeField]
     private Collider2D startFocus, focusNoQuit;
 
-    private void Start()
+    public void Focus()
     {
 #if UNITY_EDITOR || UNITY_WEBGL
         startFocus = focusNoQuit;
 #endif
-        focus.FocusInstant(startFocus);
+        focus.Focus(startFocus);
     }
 }
