@@ -12,6 +12,9 @@ public abstract class BasicInteraction : Interactible
     private Color highlightColor = Color.green;
 
     [SerializeField]
+    private Color normalColor = Color.white;
+
+    [SerializeField]
     protected PartStatus status;
 
     private bool isHighlighted = false;
@@ -38,7 +41,7 @@ public abstract class BasicInteraction : Interactible
     {
         isHighlighted = false;
         isInteractable = false;
-        SetRendererColor(Color.white);
+        SetRendererColor(normalColor);
     }
 
     private void SetRendererColor(Color color){
