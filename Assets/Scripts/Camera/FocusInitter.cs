@@ -8,10 +8,13 @@ public class FocusInitter : MonoBehaviour
     private CameraFocus focus;
     
     [SerializeField]
-    private Collider2D startFocus;
+    private Collider2D startFocus, focusNoQuit;
 
     private void Start()
     {
+#if UNITY_EDITOR || UNITY_WEBGL
+        startFocus = focusNoQuit;
+#endif
         focus.Focus(startFocus);
     }
 }
