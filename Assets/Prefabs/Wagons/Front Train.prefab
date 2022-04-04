@@ -1059,6 +1059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6398093668958168289}
   - component: {fileID: 6398093668958168294}
+  - component: {fileID: 7010841901187303265}
   m_Layer: 0
   m_Name: Focus
   m_TagString: CameraFocus
@@ -1107,6 +1108,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8878377, y: 8.870831}
   m_EdgeRadius: 0
+--- !u!114 &7010841901187303265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398093668958168288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0ad501ec4e5c54c89d0ec5eb02efa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wagon: {fileID: 57347809610326191}
 --- !u!1 &6398093669106354346
 GameObject:
   m_ObjectHideFlags: 0

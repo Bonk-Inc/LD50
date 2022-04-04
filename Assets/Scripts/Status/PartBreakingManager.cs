@@ -9,6 +9,8 @@ public class PartBreakingManager : MonoBehaviour
     private List<PartStatus> parts;
      private List<PartStatus> brokenParts = new List<PartStatus>();
 
+    private List<WagonStatus> wagons;
+
     [SerializeField, Header("Delay")]
     private float speed=4;
 
@@ -25,6 +27,15 @@ public class PartBreakingManager : MonoBehaviour
     private float addedChanceMultiplier = 0.5f;
 
     private float currentTime = 0f;
+
+    public List<PartStatus> BrokenParts => brokenParts;
+
+    [SerializeField]
+    private BrokenPartLocator locator;
+
+    public void PlayerEnterWagon(WagonStatus wagon){
+        locator.SetPlayerWagonPosition(wagons.FindIndex((w) => w == wagon));
+    }
 
     private void Reset() {
         GetParts();
@@ -62,11 +73,18 @@ public class PartBreakingManager : MonoBehaviour
 
 
     private void GetParts(){
-        var wagons = FindObjectsOfType<WagonStatus>();
+        wagons = new List<WagonStatus>(FindObjectsOfType<WagonStatus>());
         parts = new List<PartStatus>();
-        foreach (var wagon in wagons)
+        wagons.Sort((a, b) => (int)(b.transform.position.x - a.transform.position.x));
+        
+        for (int i = 0; i < wagons.Count; i++)
         {
+            var wagon = wagons[i];
             parts.AddRange(wagon.Parts);
+            foreach (var part in wagon.Parts)
+            {
+                part.wagon = i;
+            }
         }
 
         foreach (var part in parts)
@@ -82,8 +100,6 @@ public class PartBreakingManager : MonoBehaviour
             };
         }
     }
-
-
 
 
 
