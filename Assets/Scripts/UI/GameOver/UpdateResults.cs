@@ -19,7 +19,10 @@ public class UpdateResults : MonoBehaviour
 
     private void SetText(int time = 0, Day finalDay = Day.Sunday)
     {
-        resultText.text = "Your train ran for " + time + " days! Your final day was " + finalDay.ToString() + " - " + time + ".";
-        playSound.PlayClip();
+        if(resultText == null) return;
+
+        var text = "Your train ran for " + time + " days! Your final day was " + finalDay.ToString() + " - " + time + ".";
+        resultText.text = text;
+        playSound?.PlayClip();
     }
 }

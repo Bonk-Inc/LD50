@@ -56,7 +56,7 @@ public class DayTracker : MonoBehaviour {
 
     private void OnGameFinished(float timeSurvived) {
         OnGameFinish?.Invoke(daysSurvived, currentDay);
-        timer.StopTimer();
+        OnGameFinish = null;
         Time.timeScale = 0;
     }
 

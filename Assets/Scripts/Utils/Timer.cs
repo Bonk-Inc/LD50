@@ -45,7 +45,7 @@ public class Timer : MonoBehaviour
 
     public void StopTimer()
     {
-        StopCoroutine(timer);
+        if(timer != null) StopCoroutine(timer);
         
         gameOverPrefab.SetActive(true);
         OnGameFinish?.Invoke(timeSurvived);
