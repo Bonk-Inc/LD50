@@ -5,6 +5,9 @@ public class UpdateResults : MonoBehaviour
 {
     [SerializeField] 
     private DayTracker dayTracker;
+
+    [SerializeField]
+    private PlaySound playSound;
     
     [SerializeField] 
     private TMP_Text resultText;
@@ -16,6 +19,7 @@ public class UpdateResults : MonoBehaviour
 
     private void SetText(int time, Day finalDay)
     {
+        playSound.PlayClip();
         resultText.text = "Your train ran for " + time + " days! Your final day was " + finalDay.ToString() + " - " + time + ".";
     }
 }
