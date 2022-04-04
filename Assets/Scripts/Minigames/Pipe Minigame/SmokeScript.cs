@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class SmokeScript : MonoBehaviour
@@ -22,7 +21,6 @@ public class SmokeScript : MonoBehaviour
     private void SetSmokeActive()
     {
         var open = valve.getValveStatus == ValveStatus.OPEN;
-        Debug.Log(open);
         
         smoke.SetActive(open);
     }
