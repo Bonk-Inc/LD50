@@ -55,7 +55,7 @@ public class PartBreakingManager : MonoBehaviour
         var finalChance = random + addedChance;
         if(finalChance > spawnThreshold || brokenParts.Count == 0){
             var randomPart = parts.GetRandom();
-            randomPart.BreakPart();
+            randomPart?.BreakPart();
         }
     }
 

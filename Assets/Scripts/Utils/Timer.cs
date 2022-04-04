@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     
     public float TimeSurvived => timeSurvived;
 
-    public event Action<float> OnGameFinish;
+    public event Action<float> OnGameFinish, OnTimeChanged;
 
     private void Start()
     {
@@ -29,6 +29,7 @@ public class Timer : MonoBehaviour
         {
             yield return new WaitForSeconds(timeOfSecond);
             timeSurvived += timeOfSecond;
+            OnTimeChanged?.Invoke(timeSurvived);
         }
     }
 
