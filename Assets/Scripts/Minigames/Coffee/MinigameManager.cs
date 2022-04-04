@@ -8,17 +8,19 @@ public class MinigameManager : MonoBehaviour
 
     [SerializeField] 
     private GameObject itemBox, requiredItemPrefab;
+
+    [SerializeField] 
+    private MinigameStatus minigameStatus;
     
     [SerializeField] 
-    private List<Ingredient> requiredIngredients, availableIngredients;
-    
-    private List<Ingredient> gatheredIngredients;
+    private List<Ingredient> requiredIngredients, availableIngredients, gatheredIngredients;
     
     private void Awake()
     {
+        coffee.OnIngredientClick += AddIngredientToList;
         foreach (var availableIngredient in availableIngredients)
             availableIngredient.OnIngredientClick += AddIngredientToList;
-
+        
         requiredIngredients.Add(coffee);
         
         GenerateRequiredIngredientsList();
@@ -28,6 +30,9 @@ public class MinigameManager : MonoBehaviour
     private void AddIngredientToList(Ingredient ingredient)
     {
         gatheredIngredients.Add(ingredient);
+
+        if (gatheredIngredients.UnorderedEqual(requiredIngredients))
+            minigameStatus.CompleteMinigame();
     }
 
     private void GenerateRequiredIngredientsList()
@@ -35,12 +40,7 @@ public class MinigameManager : MonoBehaviour
         var size = Random.Range(0, availableIngredients.Count);
 
         for (var i = 0; i <= size; i++)
-        {
-            var position = Random.Range(0, availableIngredients.Count);
-            var item = availableIngredients[position];
-            
-            requiredIngredients.Add(item);
-        }
+            requiredIngredients.Add(availableIngredients.GetRandom());
     }
 
     private void PlaceRequiredItemsInBox()
@@ -52,6 +52,7 @@ public class MinigameManager : MonoBehaviour
             var prefab = Instantiate(requiredItemPrefab, position, transform.rotation);
             var prefabPosition = prefab.transform.position;
 
+            prefab.transform.parent = itemBox.transform;
             prefab.GetComponent<SpriteRenderer>().sprite = ingredient.GetComponent<SpriteRenderer>().sprite;
             
             position = new Vector3(prefabPosition.x + 3.1f, prefabPosition.y, prefabPosition.z);
