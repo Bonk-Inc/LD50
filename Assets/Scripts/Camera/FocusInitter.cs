@@ -8,10 +8,10 @@ public class FocusInitter : MonoBehaviour
     private CameraFocus focus;
     
     [SerializeField]
-    private Collider2D startFocus;
+    private Collider startFocus;
 
     private void Start()
     {
-        focus.Focus(startFocus);
+        focus.Focus(startFocus.bounds);
     }
 }

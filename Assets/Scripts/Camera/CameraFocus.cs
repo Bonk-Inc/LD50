@@ -15,10 +15,15 @@ public class CameraFocus : MonoBehaviour
     private Vector3 targetPosition;
     private float targetSize;
 
+    [SerializeField]
+    private OrthographicCameraFitter.Sticky stickySide;
+
     private void Awake()
     {
         cam = GetComponent<Camera>();
         fitter = new OrthographicCameraFitter(cam);
+        fitter.stickySide = stickySide;
+        fitter.margin = margin;
         targetPosition = transform.position;
         targetSize = cam.orthographicSize;
         StartCoroutine(CameraZoomRoutine());
@@ -41,7 +46,7 @@ public class CameraFocus : MonoBehaviour
         while (true)
         {
             transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.deltaTime);
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize + margin, lerpSpeed * Time.deltaTime);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, lerpSpeed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
     }

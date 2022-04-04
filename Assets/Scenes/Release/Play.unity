@@ -190,6 +190,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wagon
       objectReference: {fileID: 0}
+    - target: {fileID: 1622961440528331559, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+      propertyPath: m_Size.y
+      value: 8.221344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622961440528331559, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.09163386
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622961440528331559, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.510744
+      objectReference: {fileID: 0}
     - target: {fileID: 2803427335432219523, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: healthFactor
       value: 0.1
@@ -917,6 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   margin: 0.6
   lerpSpeed: 3
+  stickySide: 2
 --- !u!114 &2056697677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,6 +1131,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 797678215}
     m_Modifications:
+    - target: {fileID: 6398093668958168294, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: m_Size.y
+      value: 8.870831
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398093668958168294, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.6341114
+      objectReference: {fileID: 0}
     - target: {fileID: 6398093670370108257, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_Name
       value: Front Train
