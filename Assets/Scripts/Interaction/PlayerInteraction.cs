@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+
+    [SerializeField]
+    private InputChecker inputCheck;
+
     private const string INTERACTIBLE_TAG = "Interactible";
     private Interactible current;
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.E)){
+        if(inputCheck.BasicKeyInteraction()){
             current?.Interact(gameObject);
         }
     }

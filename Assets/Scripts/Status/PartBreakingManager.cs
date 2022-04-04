@@ -26,7 +26,12 @@ public class PartBreakingManager : MonoBehaviour
 
     private float currentTime = 0f;
 
+    private void Reset() {
+        GetParts();
+    }
+
     private void Awake() {
+        GetParts();
         StartCoroutine(SpawnRoutine());
     }
 
@@ -54,8 +59,9 @@ public class PartBreakingManager : MonoBehaviour
         }
     }
 
-    void Reset()
-    {
+
+
+    private void GetParts(){
         var wagons = FindObjectsOfType<WagonStatus>();
         parts = new List<PartStatus>();
         foreach (var wagon in wagons)
@@ -75,10 +81,7 @@ public class PartBreakingManager : MonoBehaviour
                 parts.Remove(part);
             };
         }
-
-
     }
-
 
 
 
