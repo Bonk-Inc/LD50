@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
-    [SerializeField] 
-    private Ingredient coffee;
+    [SerializeField]
+    private Ingredient alwaysIngredient;
 
     [SerializeField] 
     private GameObject itemBox, requiredItemPrefab;
@@ -17,12 +17,15 @@ public class MinigameManager : MonoBehaviour
     
     private void Awake()
     {
-        coffee.OnIngredientClick += AddIngredientToList;
         foreach (var availableIngredient in availableIngredients)
             availableIngredient.OnIngredientClick += AddIngredientToList;
-        
-        requiredIngredients.Add(coffee);
-        
+
+        if (alwaysIngredient != null)
+        {
+            alwaysIngredient.OnIngredientClick += AddIngredientToList;
+            requiredIngredients.Add(alwaysIngredient);   
+        }
+
         GenerateRequiredIngredientsList();
         PlaceRequiredItemsInBox();
     }
