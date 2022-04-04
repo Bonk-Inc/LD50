@@ -17,9 +17,9 @@ public class UpdateResults : MonoBehaviour
         dayTracker.OnGameFinish += SetText;
     }
 
-    private void SetText(int time, Day finalDay)
+    private void SetText(int time = 0, Day finalDay = Day.Sunday)
     {
-        playSound.PlayClip();
         resultText.text = "Your train ran for " + time + " days! Your final day was " + finalDay.ToString() + " - " + time + ".";
+        playSound.PlayClip();
     }
 }
