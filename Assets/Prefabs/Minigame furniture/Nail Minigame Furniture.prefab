@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthFactor: 1
+  healthFactor: 0.01
   breakFactor: 50
   broken: 0
 --- !u!114 &8533301712109701654
@@ -70,6 +70,7 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 8533301712237959136}
   highlightColor: {r: 0, g: 1, b: 0, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   status: {fileID: 8533301712109701649}
   opener: {fileID: 8533301712109701655}
 --- !u!114 &8533301712109701655

@@ -327,7 +327,7 @@ MonoBehaviour:
   mask: {fileID: 3800593571098488980}
   minigameStatus: {fileID: 8619271436822758597}
   hits: 3
-  sound: {fileID: 0}
+  sound: {fileID: 1430847402514323126}
 --- !u!114 &1430847402514323126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ AudioSource:
   m_GameObject: {fileID: 28853264369640172}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 20731f89cbed4d0419fc29d39336fd1e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
