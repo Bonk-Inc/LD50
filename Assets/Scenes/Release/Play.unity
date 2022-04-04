@@ -797,11 +797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1137266504 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2959658966632378547, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
-  m_PrefabInstance: {fileID: 1974588661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1144198620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1616,26 +1611,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 97347932}
     m_Modifications:
-    - target: {fileID: 2959658966632378544, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 1137266504}
-    - target: {fileID: 2959658966632378548, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
-      propertyPath: m_Size.x
-      value: 2.0655017
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959658966632378548, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
-      propertyPath: m_Size.y
-      value: 2.4219284
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959658966632378548, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.6907575
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959658966632378548, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.39962196
-      objectReference: {fileID: 0}
     - target: {fileID: 2959658966632378549, guid: ed2d552c172ff30f196643a96e87453c, type: 3}
       propertyPath: m_RootOrder
       value: 3
