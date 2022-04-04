@@ -8,6 +8,9 @@ public class MinigameOpener : MonoBehaviour
     private const string PLAYER_GAMEOBJECT_NAME = "Mink-chan"; 
     
     [SerializeField]
+    private PlaySound playSound;
+
+    [SerializeField]
     private PartStatus gamePart;
 
     [SerializeField]
@@ -45,7 +48,7 @@ public class MinigameOpener : MonoBehaviour
 
     
     private void OnMinigameFinished(){
-        
+        playSound.PlayClip();
         CloseMinigame();
         gamePart.FixPart();
         interaction.LeaveInteract();

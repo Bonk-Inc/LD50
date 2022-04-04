@@ -41,6 +41,17 @@ public class CameraFocus : MonoBehaviour
         targetPosition = fitter.CalculateCameraPosition().ToVector3(transform.position.z);
     }
 
+    public void FocusInstant(Collider2D coll)
+    {
+        this.FocusInstant(coll.bounds);
+    }
+
+    public void FocusInstant(Bounds bounds)
+    {
+        this.Focus(bounds);
+        ReachTarget();
+    }
+
     private IEnumerator CameraZoomRoutine()
     {
         while (true)
@@ -49,6 +60,11 @@ public class CameraFocus : MonoBehaviour
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, lerpSpeed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
+    }
+
+    private void ReachTarget(){
+        transform.position = targetPosition;
+        cam.orthographicSize = targetSize;
     }
 
 }

@@ -15,6 +15,6 @@ public class FocusInitter : MonoBehaviour
 #if UNITY_EDITOR || UNITY_WEBGL
         startFocus = focusNoQuit;
 #endif
-        focus.Focus(startFocus);
+        focus.FocusInstant(startFocus);
     }
 }

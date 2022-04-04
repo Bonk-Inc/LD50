@@ -14,6 +14,9 @@ public class NailHammer : MonoBehaviour
     [SerializeField]
     private int hits = 2;
 
+    [SerializeField]
+    private PlaySound sound;
+
     private int currentHit = 0;
 
     private float boundsY;
@@ -31,6 +34,8 @@ public class NailHammer : MonoBehaviour
         var position = transform.position;
         position.y = Mathf.Lerp(startY, boundsY, (float)currentHit/hits);
         transform.position = position;
+
+        sound.PlayClip();
 
         if(currentHit >= hits){
             minigameStatus.CompleteMinigame();
