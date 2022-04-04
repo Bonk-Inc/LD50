@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1224, y: 1.85}
+  m_AnchoredPosition: {x: 0.22, y: 0.5}
   m_SizeDelta: {x: 2.8217, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2959658965807827868
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
-  m_fontSizeBase: 0.6
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 2959658966632378544}
   m_Layer: 0
   m_Name: Coffee Minigame
-  m_TagString: Untagged
+  m_TagString: Interactible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ Transform:
   m_GameObject: {fileID: 2959658966632378554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.675829, y: -1.03, z: -0.69470066}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2959658967444991625}
@@ -205,7 +205,7 @@ MonoBehaviour:
   highlightColor: {r: 0, g: 1, b: 0, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   status: {fileID: 2959658966632378545}
-  opener: {fileID: 0}
+  opener: {fileID: 2959658966632378551}
 --- !u!114 &2959658966632378551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playSound: {fileID: 2959658966632378544}
   gamePart: {fileID: 2959658966632378545}
-  minigamePrefab: {fileID: 0}
+  minigamePrefab: {fileID: 780372957939641498, guid: 36f4b530ae3098bbabaf96c354d2fd21, type: 3}
   interaction: {fileID: 2959658966632378550}
 --- !u!61 &2959658966632378548
 BoxCollider2D:
@@ -235,7 +235,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08156729, y: 0.027189255}
+  m_Offset: {x: 0.6907575, y: -0.39962196}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -246,7 +246,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.6101513, y: 4.860849}
+  m_Size: {x: 2.0655017, y: 2.4219284}
   m_EdgeRadius: 0
 --- !u!82 &2959658966632378547
 AudioSource:
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3ecf7c405e8f448b8fa639e13af5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
+  source: {fileID: 2959658966632378547}
   clips:
   - {fileID: 8300000, guid: dd4804520c229c2458d7bd2bb122a5eb, type: 3}
   - {fileID: 8300000, guid: 8a1e5b5542d383e47b7772f9f40c460e, type: 3}
@@ -402,8 +402,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 3, y: 3}
+  m_Pivot: {x: 0.3840561, y: 0.5}
 --- !u!223 &2959658967048321575
 Canvas:
   m_ObjectHideFlags: 0
@@ -490,8 +490,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2959658967444991630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.66, y: -0.4, z: 0}
+  m_LocalScale: {x: 0.51890033, y: 0.48410726, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2959658966632378549}
