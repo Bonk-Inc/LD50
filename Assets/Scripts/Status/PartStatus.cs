@@ -17,6 +17,8 @@ public class PartStatus : MonoBehaviour
     public event Action<bool> OnPartChanged;
     public event Action OnBreak, OnRepaired;
 
+    public int wagon = -1;
+
     public void TryBreakPart()
     {
         var random = (int) Random.Range(0, breakFactor);
