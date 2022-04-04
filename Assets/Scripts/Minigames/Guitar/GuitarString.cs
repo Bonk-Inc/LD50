@@ -31,7 +31,7 @@ public class GuitarString : MonoBehaviour
         StringRenderer.color = Color.green;
         audioSource.Play();
         yield return new WaitForSeconds(highlightTimeInSeconds);
-        StringRenderer.color = Color.black;
+        StringRenderer.color = Color.white;
     }
 
     public Coroutine Wrong(float time){
@@ -42,14 +42,14 @@ public class GuitarString : MonoBehaviour
         isLocked = true;
         StringRenderer.color = Color.red;
         yield return new WaitForSeconds(time);
-        StringRenderer.color = Color.black;
+        StringRenderer.color = Color.white;
         isLocked = false;
     }
 
     private IEnumerator ClickedRoutine(){
         StringRenderer.color = Color.blue;
         yield return new WaitForSeconds(clickedTimeInSeconds);
-        StringRenderer.color = Color.black;
+        StringRenderer.color = Color.white;
     }
 
     public void SetLocked(bool locked){
