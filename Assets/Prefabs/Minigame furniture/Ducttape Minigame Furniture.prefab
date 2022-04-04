@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthFactor: 1
+  healthFactor: 0.1
   breakFactor: 50
   broken: 0
 --- !u!114 &258506614845760042
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13727eb177454304196f19ab03cb992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSound: {fileID: 0}
   gamePart: {fileID: 4283948560596335096}
   minigamePrefab: {fileID: 6923570249849152159, guid: a2302720d1660f549bbfa04bf9395cb0, type: 3}
   interaction: {fileID: 258506614845760042}

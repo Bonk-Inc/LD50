@@ -270,7 +270,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayTracker: {fileID: 2056697680}
+  playSound: {fileID: 0}
   resultText: {fileID: 2111789528}
+--- !u!1 &202234830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2872493650283018061, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+  m_PrefabInstance: {fileID: 6339207922983034696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &301008270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1544,6 +1550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 128695548, guid: 60aa8c81411d2474ab7d2e1d0f425c66, type: 3}
+      propertyPath: dayTracker
+      value: 
+      objectReference: {fileID: 2056697680}
     - target: {fileID: 606406532151630116, guid: 60aa8c81411d2474ab7d2e1d0f425c66, type: 3}
       propertyPath: m_SizeDelta.x
       value: -500
@@ -1715,12 +1725,128 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4283948560596335096, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
   m_PrefabInstance: {fileID: 6339207922983034696}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 202234830}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2038775692
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202234830}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 20731f89cbed4d0419fc29d39336fd1e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2038775693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202234830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3ecf7c405e8f448b8fa639e13af5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 2038775692}
+  clips:
+  - {fileID: 8300000, guid: dd4804520c229c2458d7bd2bb122a5eb, type: 3}
+  - {fileID: 8300000, guid: 8a1e5b5542d383e47b7772f9f40c460e, type: 3}
+  - {fileID: 8300000, guid: 10b0dba54d7b04a43996a1ed2c23fd06, type: 3}
+  - {fileID: 8300000, guid: e9d0213c669b3364aa7a30c650a692b2, type: 3}
+  - {fileID: 8300000, guid: 3f83a94dfdca03143b16a7f0a05ea8fd, type: 3}
+  - {fileID: 8300000, guid: 820e6f32d1b5672439a5579ff9742345, type: 3}
 --- !u!1 &2056697672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2418,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 301008273}
     m_Modifications:
+    - target: {fileID: 2560755524501250085, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: playSound
+      value: 
+      objectReference: {fileID: 2038775693}
     - target: {fileID: 2872493650283018061, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
       propertyPath: m_Name
       value: Ducttape Minigame Furniture
