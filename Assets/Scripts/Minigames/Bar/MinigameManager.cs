@@ -23,7 +23,7 @@ public class MinigameManager : MonoBehaviour
         if (alwaysIngredient != null)
         {
             alwaysIngredient.OnIngredientClick += AddIngredientToList;
-            requiredIngredients.Add(alwaysIngredient);   
+            requiredIngredients.Add(alwaysIngredient);
         }
 
         GenerateRequiredIngredientsList();
@@ -43,7 +43,7 @@ public class MinigameManager : MonoBehaviour
         var size = Random.Range(0, availableIngredients.Count);
 
         for (var i = 0; i <= size; i++)
-            requiredIngredients.Add(availableIngredients.GetRandom());
+            requiredIngredients.Add(GetRandomIngredient());
     }
 
     private void PlaceRequiredItemsInBox()
@@ -60,5 +60,15 @@ public class MinigameManager : MonoBehaviour
             
             position = new Vector3(prefabPosition.x + 3.1f, prefabPosition.y, prefabPosition.z);
         }
+    }
+
+    private Ingredient GetRandomIngredient()
+    {
+        var ingredient = availableIngredients.GetRandom();
+
+        if (requiredIngredients.Contains(ingredient))
+            ingredient = GetRandomIngredient();
+
+        return ingredient;
     }
 }

@@ -11,6 +11,9 @@ public class BookMinigameManager : MonoBehaviour
     private BookSpot[] spots;
 
     [SerializeField]
+    private PlaySound sound;
+    
+    [SerializeField]
     private MinigameStatus status;
 
     private BookSpot current = null;
@@ -65,6 +68,7 @@ public class BookMinigameManager : MonoBehaviour
         if(draggingBook != null && Input.GetMouseButtonUp(0)) {
             spots[currentEmpty].SetBook(draggingBook);
             draggingBook = null;
+            sound?.PlayClip();
             CheckWin();
         }
     }
