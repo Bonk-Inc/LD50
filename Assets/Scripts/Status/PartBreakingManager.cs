@@ -61,7 +61,7 @@ public class PartBreakingManager : MonoBehaviour
 
 
 
-    private void GetParts(){
+    public void GetParts(){
         var wagons = FindObjectsOfType<WagonStatus>();
         parts = new List<PartStatus>();
         foreach (var wagon in wagons)

@@ -24,7 +24,7 @@ public class DayTrackerVisual : MonoBehaviour
     }
 
     private void OnTimeUpdated(float timeOfDay) {
-        var dayProgress = ((dayTracker.SecondsInDay / 100) * timeOfDay);
+        var dayProgress = ((float)(100 / dayTracker.SecondsInDay) * timeOfDay) / 100;
         timeBar.fillAmount = dayProgress;
     }
 
