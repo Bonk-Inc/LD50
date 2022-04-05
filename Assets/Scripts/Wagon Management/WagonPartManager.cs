@@ -12,6 +12,14 @@ public class WagonPartManager : MonoBehaviour
 
     [SerializeField]
     private List<PartStatus> parts;
+
+    [SerializeField]
+    private Transform next;
+
+    public Transform Next => next;
+
+    [SerializeField]
+    private GameObject backWall;
     
     [ContextMenu("Add Part")]
     public void AddPart() {
@@ -22,6 +30,14 @@ public class WagonPartManager : MonoBehaviour
         parts.Remove(part);
         wagonStatus.Parts.Add(part);
         OnPartAdded?.Invoke();
+    }
+
+    public void SetLast(bool last){
+        if (last) {
+            backWall.SetActive(true);
+        } else {
+            backWall.SetActive(false);
+        }
     }
 
     public int PartsLeft => parts.Count;

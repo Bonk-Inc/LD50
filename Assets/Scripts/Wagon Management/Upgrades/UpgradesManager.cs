@@ -39,9 +39,9 @@ public class UpgradesManager : MonoBehaviour
     }
 
     public void AddCart() {
-        var wagon = wagons.GetRandom();
-        //TODO Instantiate and position
-        wagonManager.Wagons.Add(wagon);
+        var wagon = Instantiate(wagons.GetRandom());
+        wagon.transform.position = wagonManager.LastWagon.Next.position;
+        wagonManager.AddWagon(wagon);
         CloseCanvas();
     }
 

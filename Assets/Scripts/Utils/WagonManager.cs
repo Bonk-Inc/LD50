@@ -12,8 +12,14 @@ public class WagonManager : MonoBehaviour
     [SerializeField]
     private PartBreakingManager partBreakingManager;
 
+    [SerializeField]
+    private WagonPartManager lastWagon;
+
+
     public List<WagonPartManager> Wagons => wagons;
     
+    public WagonPartManager LastWagon => lastWagon;
+
     private void Awake()
     {
         foreach (var wagon in wagons){
@@ -21,12 +27,17 @@ public class WagonManager : MonoBehaviour
             wagon.Status.OnWagonBroken += timer.StopTimer;
             wagon.AddPart();
         }
+
+        lastWagon = wagons[wagons.Count-1];
     }
 
     public void AddWagon(WagonPartManager wagon)
     {
         wagon.Status.OnWagonBroken += timer.StopTimer;
         wagon.OnPartAdded += partBreakingManager.GetParts;
+        lastWagon.SetLast(false);
+        lastWagon = wagon;
+        lastWagon.SetLast(true);
         wagon.AddPart();
         
         wagons.Add(wagon);
