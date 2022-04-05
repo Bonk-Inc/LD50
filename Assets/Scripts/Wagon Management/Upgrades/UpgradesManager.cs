@@ -12,6 +12,9 @@ public class UpgradesManager : MonoBehaviour
     private Canvas upgradeCanvas;
 
     [SerializeField]
+    private PlaySound playSound;
+
+    [SerializeField]
     private DayTracker tracker;
 
     [SerializeField]
@@ -35,6 +38,7 @@ public class UpgradesManager : MonoBehaviour
             upgradeCanvas.enabled = true;
             Time.timeScale = 0;
             addPartButton.gameObject.SetActive(wagonManager.PartsAvailable()); 
+            playSound.PlayClip();
         }
     }
 

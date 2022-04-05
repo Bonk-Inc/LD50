@@ -749,6 +749,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3263d7b8191616a4c9cb52cf0ce9ea90, type: 3}
+    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0207e4002968faa4c90b58e051f121f3, type: 3}
+    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 890c058e5e686bb4184825ec3109ca22, type: 3}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: tracker
       value: 
@@ -759,7 +775,7 @@ PrefabInstance:
       objectReference: {fileID: 2056697678}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: wagons.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: wagons.Array.data[0]
@@ -781,6 +797,10 @@ PrefabInstance:
       propertyPath: wagons.Array.data[4]
       value: 
       objectReference: {fileID: 1433108078750934275, guid: 9e4cd263109d71e4580000d528672ea7, type: 3}
+    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: wagons.Array.data[5]
+      value: 
+      objectReference: {fileID: 8554986859256838191, guid: c45a4a42e6084314485db9828714c38c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 855d7af2021f40643aa110349339c92d, type: 3}
 --- !u!114 &1233714741 stripped
