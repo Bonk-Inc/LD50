@@ -48,7 +48,7 @@ public class MinigameManager : MonoBehaviour
 
     private void PlaceRequiredItemsInBox()
     {
-        var position = new Vector3(-3.583071f, 3.38f, 0f);
+        var position = new Vector3(-2f, 0f, 0f);
 
         foreach (var ingredient in requiredIngredients)
         {
@@ -56,9 +56,10 @@ public class MinigameManager : MonoBehaviour
             var prefabPosition = prefab.transform.position;
 
             prefab.transform.parent = itemBox.transform;
+            prefab.transform.localPosition = position;
             prefab.GetComponent<SpriteRenderer>().sprite = ingredient.GetComponent<SpriteRenderer>().sprite;
             
-            position = new Vector3(prefabPosition.x + 3.1f, prefabPosition.y, prefabPosition.z);
+            position = new Vector3(position.x + 1f, position.y, position.z);
         }
     }
 
