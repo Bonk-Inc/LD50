@@ -72,7 +72,7 @@ public class PartBreakingManager : MonoBehaviour
 
 
 
-    private void GetParts(){
+    public void GetParts(){
         wagons = new List<WagonStatus>(FindObjectsOfType<WagonStatus>());
         parts = new List<PartStatus>();
         wagons.Sort((a, b) => (int)(b.transform.position.x - a.transform.position.x));
