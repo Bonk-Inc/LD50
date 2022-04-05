@@ -28,6 +28,9 @@ public class CameraFocusNotifier : MonoBehaviour
             return;
         }
 
+        var wagonEnter = other.GetComponent<WagonEnterNotif>();
+        wagonEnter?.Notif();
+
         cam.Focus(other);
     }
 }

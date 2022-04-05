@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
-    [SerializeField] 
-    private Ingredient coffee;
+    [SerializeField]
+    private Ingredient alwaysIngredient;
 
     [SerializeField] 
     private GameObject itemBox, requiredItemPrefab;
@@ -17,12 +17,15 @@ public class MinigameManager : MonoBehaviour
     
     private void Awake()
     {
-        coffee.OnIngredientClick += AddIngredientToList;
         foreach (var availableIngredient in availableIngredients)
             availableIngredient.OnIngredientClick += AddIngredientToList;
-        
-        requiredIngredients.Add(coffee);
-        
+
+        if (alwaysIngredient != null)
+        {
+            alwaysIngredient.OnIngredientClick += AddIngredientToList;
+            requiredIngredients.Add(alwaysIngredient);
+        }
+
         GenerateRequiredIngredientsList();
         PlaceRequiredItemsInBox();
     }
@@ -40,7 +43,7 @@ public class MinigameManager : MonoBehaviour
         var size = Random.Range(0, availableIngredients.Count);
 
         for (var i = 0; i <= size; i++)
-            requiredIngredients.Add(availableIngredients.GetRandom());
+            requiredIngredients.Add(GetRandomIngredient());
     }
 
     private void PlaceRequiredItemsInBox()
@@ -57,5 +60,15 @@ public class MinigameManager : MonoBehaviour
             
             position = new Vector3(prefabPosition.x + 3.1f, prefabPosition.y, prefabPosition.z);
         }
+    }
+
+    private Ingredient GetRandomIngredient()
+    {
+        var ingredient = availableIngredients.GetRandom();
+
+        if (requiredIngredients.Contains(ingredient))
+            ingredient = GetRandomIngredient();
+
+        return ingredient;
     }
 }

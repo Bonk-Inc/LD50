@@ -60,6 +60,10 @@ public class DayTracker : MonoBehaviour {
         Time.timeScale = 0;
     }
 
+    public void ResetTimescale(){
+        Time.timeScale = 1;
+    }
+
     private Tuple<int, Day> CalculateDay(float timeSurvived) {
         var daysSurvived = (int) Math.Floor(timeSurvived / secondsInDay);
         var day = (daysSurvived + (int) startDay) % maxDays;
