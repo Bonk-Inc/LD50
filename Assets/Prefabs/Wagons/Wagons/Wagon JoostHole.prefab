@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ducttape Minigame Furniture
       objectReference: {fileID: 0}
+    - target: {fileID: 2872493650283018061, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -139,6 +143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Djoost
       objectReference: {fileID: 0}
+    - target: {fileID: 7102241136198064687, guid: a2dc438d653fbbc47bedb551cb2e2e39, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2dc438d653fbbc47bedb551cb2e2e39, type: 3}
 --- !u!114 &3236747063941756641 stripped
@@ -237,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1622961439178409981, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: m_Name
-      value: Wagon 2
+      value: Wagon JoostHole
       objectReference: {fileID: 0}
     - target: {fileID: 1622961440528331559, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: m_Size.y
@@ -344,6 +352,10 @@ PrefabInstance:
     - target: {fileID: 8533301712109701643, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
       propertyPath: m_Name
       value: Nail Minigame Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533301712109701643, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8533301712109701649, guid: c9fb0e5f72809224a9c2319cea52a4ef, type: 3}
       propertyPath: breakFactor

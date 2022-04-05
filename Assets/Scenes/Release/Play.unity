@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1622961439178409979, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1622961439178409979, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 924622187647366766, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: tracker
       value: 
@@ -751,7 +755,7 @@ PrefabInstance:
       objectReference: {fileID: 2056697678}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: wagons.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: wagons.Array.data[0]
@@ -760,7 +764,15 @@ PrefabInstance:
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: wagons.Array.data[1]
       value: 
+      objectReference: {fileID: 4880351522577134701, guid: dfc841e93faa8c04c8ca3a9837ea242a, type: 3}
+    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: wagons.Array.data[2]
+      value: 
       objectReference: {fileID: 8039216799358075014, guid: 44cba4efd81e7a7409488af9facae9ea, type: 3}
+    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
+      propertyPath: wagons.Array.data[3]
+      value: 
+      objectReference: {fileID: 914642483951934925, guid: aa5cfc6b8f0f10344b27c9063cdd456a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 855d7af2021f40643aa110349339c92d, type: 3}
 --- !u!114 &1233714741 stripped
@@ -1170,7 +1182,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 113.95, y: 1}
+  m_Size: {x: 500, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1783,7 +1795,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wagons:
   - {fileID: 6398093669780637438}
-  - {fileID: 0}
   - {fileID: 97347931}
   timer: {fileID: 2056697677}
   partBreakingManager: {fileID: 797678216}
@@ -1897,7 +1908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 2056697677}
   startDay: 2
-  secondsInDay: 1.5
+  secondsInDay: 6.5
 --- !u!1 &1452571602693631875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,11 +2334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6398093668871601235, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_Size.x
-      value: 4.4734626
+      value: 64.797386
       objectReference: {fileID: 0}
     - target: {fileID: 6398093668871601235, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_Offset.x
-      value: -1.7367315
+      value: -31.898693
       objectReference: {fileID: 0}
     - target: {fileID: 6398093668958168294, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_Size.y
@@ -2343,7 +2354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_LocalPosition.x
