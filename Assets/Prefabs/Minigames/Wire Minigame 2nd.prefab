@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7672414343994673660
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834803512198548801, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641316106544921902, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_Name
+      value: Wire Minigame 2nd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932312600826865104, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597875606142942755, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636388061235230391, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929828796952564462, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417734174389640813, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459386997656092480, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077877947167881874, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.31
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ff6b8531cf02cd498e46da618f4eac2, type: 3}
