@@ -15,7 +15,7 @@ public class WagonEnterNotif : MonoBehaviour
     }
 
     public void Notif(){
-        breaker.PlayerEnterWagon(wagon);
+        breaker?.PlayerEnterWagon(wagon);
     }
 
 }
