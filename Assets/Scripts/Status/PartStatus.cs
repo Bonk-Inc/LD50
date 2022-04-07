@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class PartStatus : MonoBehaviour
 {
     [SerializeField]
-    private float healthFactor = 1f, breakFactor = 50f;
+    private float healthFactor = 1f;
 
     [SerializeField] 
     private bool broken = false;
@@ -18,13 +18,6 @@ public class PartStatus : MonoBehaviour
     public event Action OnBreak, OnRepaired;
 
     public int wagon = -1;
-
-    public void TryBreakPart()
-    {
-        var random = (int) Random.Range(0, breakFactor);
-        if (random == 1)
-            BreakPart();
-    }
 
     [ContextMenu("Break")]
     public void BreakPart(){

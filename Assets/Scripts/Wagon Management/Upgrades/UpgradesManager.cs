@@ -30,6 +30,10 @@ public class UpgradesManager : MonoBehaviour
     {
         tracker.OnDayUpdated += ActivateCanvas;
     }
+    
+    private void Start() {
+        AddCart();
+    }
 
     private bool CheckDay(Day day) => day == upgradeDay; 
 

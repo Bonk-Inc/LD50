@@ -97,14 +97,9 @@ GameObject:
   - component: {fileID: 258506614845760042}
   - component: {fileID: 2560755524501250085}
   - component: {fileID: 3643917182204511764}
-<<<<<<< HEAD
-  - component: {fileID: 2038775692}
-  - component: {fileID: 2038775693}
-=======
   - component: {fileID: 7024978571743738815}
   - component: {fileID: 4426448664873089189}
   - component: {fileID: 1890863490937427901}
->>>>>>> 2919a214cfb84535219b12283ad28d85a401cdd9
   m_Layer: 0
   m_Name: Ducttape Minigame Furniture
   m_TagString: Interactible
@@ -175,11 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13727eb177454304196f19ab03cb992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  playSound: {fileID: 2038775693}
-=======
   playSound: {fileID: 4426448664873089189}
->>>>>>> 2919a214cfb84535219b12283ad28d85a401cdd9
   gamePart: {fileID: 4283948560596335096}
   minigamePrefab: {fileID: 6923570249849152159, guid: a2302720d1660f549bbfa04bf9395cb0, type: 3}
   interaction: {fileID: 258506614845760042}
@@ -209,11 +200,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25051624, y: 0.61158156}
   m_EdgeRadius: 0
-<<<<<<< HEAD
---- !u!82 &2038775692
-=======
 --- !u!82 &7024978571743738815
->>>>>>> 2919a214cfb84535219b12283ad28d85a401cdd9
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,11 +296,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
---- !u!114 &2038775693
-=======
 --- !u!114 &4426448664873089189
->>>>>>> 2919a214cfb84535219b12283ad28d85a401cdd9
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,11 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3ecf7c405e8f448b8fa639e13af5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  source: {fileID: 2038775692}
-=======
   source: {fileID: 7024978571743738815}
->>>>>>> 2919a214cfb84535219b12283ad28d85a401cdd9
   clips:
   - {fileID: 8300000, guid: dd4804520c229c2458d7bd2bb122a5eb, type: 3}
   - {fileID: 8300000, guid: 8a1e5b5542d383e47b7772f9f40c460e, type: 3}
@@ -337,8 +316,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9d0213c669b3364aa7a30c650a692b2, type: 3}
   - {fileID: 8300000, guid: 3f83a94dfdca03143b16a7f0a05ea8fd, type: 3}
   - {fileID: 8300000, guid: 820e6f32d1b5672439a5579ff9742345, type: 3}
-<<<<<<< HEAD
-=======
 --- !u!114 &1890863490937427901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,4 +500,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> 2919a214cfb84535219b12283ad28d85a401cdd9

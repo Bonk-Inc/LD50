@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2443783292327147031, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: parts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2443783292327147031, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: parts.Array.data[0]
@@ -111,6 +111,10 @@ PrefabInstance:
       propertyPath: parts.Array.data[1]
       value: 
       objectReference: {fileID: 6420170062340561768}
+    - target: {fileID: 2443783292327147031, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
+      propertyPath: parts.Array.data[2]
+      value: 
+      objectReference: {fileID: 5333423805278256938}
     - target: {fileID: 2803427335432219523, guid: b9184c4408036624daf38b6b1f99f55b, type: 3}
       propertyPath: healthFactor
       value: 0.1
@@ -283,6 +287,78 @@ PrefabInstance:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8166605245265320039, guid: 637e082d980298c41be94e0f9751695c, type: 3}
   m_PrefabInstance: {fileID: 2903865821326050063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b47a42cb0c4db99493e26e5b098d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &8176149015043966674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4524270723553523397}
+    m_Modifications:
+    - target: {fileID: 2872493650283018061, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_Name
+      value: Ducttape Minigame Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872493650283018061, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848928925055083729, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+--- !u!114 &5333423805278256938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4283948560596335096, guid: b00810a537380574db77cbfbd4874bc6, type: 3}
+  m_PrefabInstance: {fileID: 8176149015043966674}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

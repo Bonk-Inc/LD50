@@ -32,12 +32,8 @@ public class WagonPartManager : MonoBehaviour
         OnPartAdded?.Invoke();
     }
 
-    public void SetLast(bool last){
-        if (last) {
-            backWall.SetActive(true);
-        } else {
-            backWall.SetActive(false);
-        }
+    public void SetLast(bool last) {
+        if(backWall != null) backWall.SetActive(last);
     }
 
     public int PartsLeft => parts.Count;

@@ -19,7 +19,6 @@ public class BrokenPartLocator : MonoBehaviour
     }
 
     public void SetPlayerWagonPosition(int position){
-        Debug.Log(position);
         playerWagonPosition = position;
         UpdateArrows();
     }
