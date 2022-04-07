@@ -432,7 +432,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 952500f97899920ec96f9b31244dd78c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6415094, g: 0.115586676, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -635,8 +635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthFactor: 0.1
-  breakFactor: 30
   broken: 0
+  wagon: -1
 --- !u!114 &6607536790254377957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +657,7 @@ MonoBehaviour:
   - {fileID: 558434888}
   - {fileID: 85939542}
   highlightColor: {r: 0, g: 1, b: 0, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   status: {fileID: 4667553125078060228}
   opener: {fileID: 5480633009286103384}
 --- !u!114 &5480633009286103384
