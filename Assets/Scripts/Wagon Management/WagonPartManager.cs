@@ -5,10 +5,10 @@ using UnityEngine;
 public class WagonPartManager : MonoBehaviour
 {
     [SerializeField]
-    private WagonStatus wagonStatus;
-    public WagonStatus Status => wagonStatus;
+    private Wagon wagonStatus;
+    public Wagon Status => wagonStatus;
 
-    public event Action OnPartAdded;
+    public event Action<PartStatus> OnPartAdded;
 
     [SerializeField]
     private List<PartStatus> parts;
@@ -22,14 +22,15 @@ public class WagonPartManager : MonoBehaviour
     private GameObject backWall;
     
     [ContextMenu("Add Part")]
-    public void AddPart() {
+    public void AddRandomPart() {
         if(parts.Count == 0) return;
 
         var part = parts.GetRandom();
         part.gameObject.SetActive(true);
+        part.OnRepaired += wagonStatus.Heal;
         parts.Remove(part);
         wagonStatus.Parts.Add(part);
-        OnPartAdded?.Invoke();
+        OnPartAdded?.Invoke(part);
     }
 
     public void SetLast(bool last) {

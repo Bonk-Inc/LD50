@@ -562,70 +562,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 924622187647366766, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: clips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 3263d7b8191616a4c9cb52cf0ce9ea90, type: 3}
-    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: clips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0207e4002968faa4c90b58e051f121f3, type: 3}
-    - target: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: clips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 890c058e5e686bb4184825ec3109ca22, type: 3}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: tracker
       value: 
       objectReference: {fileID: 2056697680}
     - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: playSound
-      value: 
-      objectReference: {fileID: 1643455682}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
       propertyPath: wagonManager
       value: 
       objectReference: {fileID: 2056697678}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[0]
-      value: 
-      objectReference: {fileID: 695407436242128882, guid: f9b8c1faddbeb764694bdd63abb10b9b, type: 3}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[1]
-      value: 
-      objectReference: {fileID: 4880351522577134701, guid: dfc841e93faa8c04c8ca3a9837ea242a, type: 3}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[2]
-      value: 
-      objectReference: {fileID: 8039216799358075014, guid: 44cba4efd81e7a7409488af9facae9ea, type: 3}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[3]
-      value: 
-      objectReference: {fileID: 914642483951934925, guid: aa5cfc6b8f0f10344b27c9063cdd456a, type: 3}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[4]
-      value: 
-      objectReference: {fileID: 1433108078750934275, guid: 9e4cd263109d71e4580000d528672ea7, type: 3}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[5]
-      value: 
-      objectReference: {fileID: 8554986859256838191, guid: c45a4a42e6084314485db9828714c38c, type: 3}
-    - target: {fileID: 8268039411581627034, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-      propertyPath: wagons.Array.data[6]
-      value: 
-      objectReference: {fileID: 1373043715753658730, guid: d262be898a308be4c9c56fa897251e59, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 855d7af2021f40643aa110349339c92d, type: 3}
 --- !u!114 &1233714741 stripped
@@ -1059,17 +1003,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634730220}
   m_CullTransparentMesh: 1
---- !u!114 &1643455682 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8268039411581627028, guid: 855d7af2021f40643aa110349339c92d, type: 3}
-  m_PrefabInstance: {fileID: 1222672063}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e3ecf7c405e8f448b8fa639e13af5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1792122007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5890740048110048919, guid: 50a066dcfd35d8ec2990d32a7984247f, type: 3}
@@ -2050,6 +1983,10 @@ PrefabInstance:
       propertyPath: parts.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 57347809610326191, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
+      propertyPath: wagonHealthIncrease
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3458641900644178660, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_SortingOrder
       value: 6
@@ -2076,7 +2013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6398093670370108262, guid: d6af64929f3849a4faa714aac3455f32, type: 3}
       propertyPath: m_LocalPosition.x

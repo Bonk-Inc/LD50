@@ -23,9 +23,7 @@ public class WagonManager : MonoBehaviour
     private void Awake()
     {
         foreach (var wagon in wagons){
-            wagon.OnPartAdded += partBreakingManager.GetParts;
-            wagon.Status.OnWagonBroken += timer.StopTimer;
-            wagon.AddPart();
+            SetupWagon(wagon);
         }
 
         lastWagon = wagons[wagons.Count-1];
@@ -33,14 +31,17 @@ public class WagonManager : MonoBehaviour
 
     public void AddWagon(WagonPartManager wagon)
     {
-        wagon.Status.OnWagonBroken += timer.StopTimer;
-        wagon.OnPartAdded += partBreakingManager.GetParts;
         lastWagon.SetLast(false);
         lastWagon = wagon;
         lastWagon.SetLast(true);
-        wagon.AddPart();
-        
+        SetupWagon(wagon);
         wagons.Add(wagon);
+    }
+
+    private void SetupWagon(WagonPartManager wagon) {
+        wagon.Status.OnWagonBroken += timer.StopTimer;
+        wagon.OnPartAdded += partBreakingManager.AddPart;
+        wagon.AddRandomPart();
     }
 
     public bool PartsAvailable() {

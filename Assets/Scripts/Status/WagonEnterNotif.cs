@@ -6,7 +6,7 @@ public class WagonEnterNotif : MonoBehaviour
 {
     
     [SerializeField]
-    private WagonStatus wagon;
+    private Wagon wagon;
 
     private PartBreakingManager breaker;
 

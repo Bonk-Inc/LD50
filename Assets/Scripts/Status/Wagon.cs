@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class WagonStatus : MonoBehaviour
+public class Wagon : MonoBehaviour
 {
     [SerializeField]
     private float maxHealth, currentHealth, wagonHealthDecrease = 20f, wagonHealthIncrease = 5f, decreaseDelay = 1f;
@@ -45,18 +45,18 @@ public class WagonStatus : MonoBehaviour
                     continue; 
                 }
                 allFixed = false;
-                DecreaseHealth(status.getHealthFactor);
+                Damage(status.getHealthFactor);
                 
                 if (isBroken) OnWagonBroken?.Invoke();
             }
 
-            if(allFixed) IncreaseHealth(1);
+            if(allFixed) Heal(1);
 
             yield return new WaitForSeconds(decreaseDelay);   
         }
     }
 
-    private void DecreaseHealth(float decreaseFactor)
+    private void Damage(float decreaseFactor)
     {
         var newHealth = currentHealth - (wagonHealthDecrease * decreaseFactor);
         
@@ -64,11 +64,16 @@ public class WagonStatus : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth);
     }
 
-    private void IncreaseHealth(float increaseFactor)
+    private void Heal(float increaseFactor)
     {
         var newHealth = currentHealth + (wagonHealthIncrease * increaseFactor);
         
         currentHealth = Math.Min(newHealth, maxHealth);
         OnHealthChanged?.Invoke(currentHealth);
+    }
+
+    public void Heal() 
+    {
+        Heal(wagonHealthIncrease);
     }
 }

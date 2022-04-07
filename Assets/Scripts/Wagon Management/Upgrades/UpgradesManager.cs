@@ -56,7 +56,7 @@ public class UpgradesManager : MonoBehaviour
     public void AddPart() {
         var availableWagons = wagonManager.GetAvailablePartsWagons();
         var wagon = availableWagons.GetRandom();
-        wagon.AddPart();
+        wagon.AddRandomPart();
         CloseCanvas();
     }
 

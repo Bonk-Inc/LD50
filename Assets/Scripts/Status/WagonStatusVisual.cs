@@ -5,7 +5,7 @@ using UnityEngine;
 public class WagonStatusVisual : MonoBehaviour
 {
     [SerializeField]
-    private WagonStatus status;
+    private Wagon status;
 
     [SerializeField]
     private SpriteRenderer healthBar;

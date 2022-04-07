@@ -198,14 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 8268039411581627029}
   clips:
-  - {fileID: 8300000, guid: 8d9a8772f5d0dd4438dba55d826f288c, type: 3}
-  - {fileID: 8300000, guid: dde3a9518df3dd04b8de6eb3799dc796, type: 3}
-  - {fileID: 8300000, guid: a4b9cccbcf4e9f649b1fff0b2d4c83f0, type: 3}
-  - {fileID: 8300000, guid: 154882ce11415f8499d6f2cd4d24a132, type: 3}
-  - {fileID: 8300000, guid: f52523411681f144c854b9f23eb4f28b, type: 3}
-  - {fileID: 8300000, guid: 573dc78ac4022c64aba86504101f111f, type: 3}
-  - {fileID: 8300000, guid: 0a28cdc74fabbb84588371e616f3e786, type: 3}
-  - {fileID: 8300000, guid: 8976bb46d572462478174c67aa8a04fe, type: 3}
+  - {fileID: 8300000, guid: 3263d7b8191616a4c9cb52cf0ce9ea90, type: 3}
+  - {fileID: 8300000, guid: 0207e4002968faa4c90b58e051f121f3, type: 3}
+  - {fileID: 8300000, guid: 890c058e5e686bb4184825ec3109ca22, type: 3}
 --- !u!82 &8268039411581627029
 AudioSource:
   m_ObjectHideFlags: 0
@@ -316,10 +311,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wagonManager: {fileID: 0}
   upgradeCanvas: {fileID: 924622187647366761}
+  playSound: {fileID: 8268039411581627028}
   tracker: {fileID: 0}
   upgradeDay: 1
   addPartButton: {fileID: 9008280311645805756}
-  wagons: []
+  wagons:
+  - {fileID: 695407436242128882, guid: f9b8c1faddbeb764694bdd63abb10b9b, type: 3}
+  - {fileID: 4880351522577134701, guid: dfc841e93faa8c04c8ca3a9837ea242a, type: 3}
+  - {fileID: 8039216799358075014, guid: 44cba4efd81e7a7409488af9facae9ea, type: 3}
+  - {fileID: 914642483951934925, guid: aa5cfc6b8f0f10344b27c9063cdd456a, type: 3}
+  - {fileID: 1433108078750934275, guid: 9e4cd263109d71e4580000d528672ea7, type: 3}
+  - {fileID: 8554986859256838191, guid: c45a4a42e6084314485db9828714c38c, type: 3}
+  - {fileID: 1373043715753658730, guid: d262be898a308be4c9c56fa897251e59, type: 3}
+  - {fileID: 6054874543165833514, guid: 810bac9affc073a46a3b39b704a89fb3, type: 3}
 --- !u!1 &924622187726363076
 GameObject:
   m_ObjectHideFlags: 0

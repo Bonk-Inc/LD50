@@ -7,9 +7,9 @@ public class PartBreakingManager : MonoBehaviour
 {
     [SerializeField]
     private List<PartStatus> parts;
-     private List<PartStatus> brokenParts = new List<PartStatus>();
+    private List<PartStatus> brokenParts = new List<PartStatus>();
 
-    private List<WagonStatus> wagons;
+    private List<Wagon> wagons;
 
     [SerializeField, Header("Delay")]
     private float speed=4;
@@ -33,7 +33,7 @@ public class PartBreakingManager : MonoBehaviour
     [SerializeField]
     private BrokenPartLocator locator;
 
-    public void PlayerEnterWagon(WagonStatus wagon){
+    public void PlayerEnterWagon(Wagon wagon){
         locator.SetPlayerWagonPosition(wagons.FindIndex((w) => w == wagon));
     }
 
@@ -72,8 +72,8 @@ public class PartBreakingManager : MonoBehaviour
 
 
 
-    public void GetParts(){
-        wagons = new List<WagonStatus>(FindObjectsOfType<WagonStatus>());
+    public void GetParts() {
+        wagons = new List<Wagon>(FindObjectsOfType<Wagon>());
         parts = new List<PartStatus>();
         wagons.Sort((a, b) => (int)(b.transform.position.x - a.transform.position.x));
         
@@ -86,21 +86,20 @@ public class PartBreakingManager : MonoBehaviour
                 part.wagon = i;
             }
         }
-
-        foreach (var part in parts)
-        {
-            part.OnRepaired += () => {
-                brokenParts.Remove(part);
-                parts.Add(part);
-            };
-
-            part.OnBreak += () => {
-                brokenParts.Add(part);
-                parts.Remove(part);
-            };
-        }
     }
 
+    public void AddPart(PartStatus part) {
+        GetParts();
 
+        part.OnRepaired += () => {
+            brokenParts.Remove(part);
+            parts.Add(part);
+        };
+
+        part.OnBreak += () => {
+            if(!brokenParts.Contains(part)) brokenParts.Add(part);
+            parts.Remove(part);
+        };
+    }
 
 }
