@@ -378,7 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbd30012f9f4d7b89b839ea0c5055a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valve: {fileID: 7613911835703493032}
+  valves:
+  - {fileID: 7613911835703493032}
   smoke: {fileID: 2539067427459675898}
 --- !u!1 &4718634711092380565 stripped
 GameObject:
@@ -397,7 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbd30012f9f4d7b89b839ea0c5055a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valve: {fileID: 7613911834329627135}
+  valves:
+  - {fileID: 7613911834329627135}
   smoke: {fileID: 2345927929230612814}
 --- !u!114 &7613911834329627135 stripped
 MonoBehaviour:
@@ -980,7 +982,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbd30012f9f4d7b89b839ea0c5055a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valve: {fileID: 3309303078714801291}
+  valves:
+  - {fileID: 3309303078714801291}
+  - {fileID: 7613911834419195588}
   smoke: {fileID: 6737029176081104244}
 --- !u!114 &3309303078714801291 stripped
 MonoBehaviour:

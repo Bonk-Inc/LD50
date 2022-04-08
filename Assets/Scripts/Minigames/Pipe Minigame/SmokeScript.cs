@@ -3,14 +3,16 @@ using UnityEngine;
 public class SmokeScript : MonoBehaviour
 {
     [SerializeField]
-    private ValveController valve;
+    private ValveController[] valves;
 
     [SerializeField] 
     private GameObject smoke;
     
     private void Awake()
     {
-        valve.onValveChange += SetSmokeActive;
+        foreach (var valve in valves){
+            valve.onValveChange += SetSmokeActive;
+        }
     }
 
     private void Start()
@@ -20,7 +22,13 @@ public class SmokeScript : MonoBehaviour
 
     private void SetSmokeActive()
     {
-        var open = valve.getValveStatus == ValveStatus.OPEN;
+        var open = true;
+        foreach (var valve in valves){
+            if(valve.getValveStatus == ValveStatus.CLOSED) {
+                smoke.SetActive(false);
+                return;
+            }
+        }
         
         smoke.SetActive(open);
     }
