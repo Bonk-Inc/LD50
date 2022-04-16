@@ -1,8 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinigameManager : MonoBehaviour
+public class MinigameManager : MonoBehaviour // TODO Rename
 {
+    [SerializeField]
+    private int minimumIngredients = 1;
+    
+    [SerializeField]
+    private IngredientHolder holder;
+
     [SerializeField]
     private Ingredient alwaysIngredient;
 
@@ -13,44 +19,29 @@ public class MinigameManager : MonoBehaviour
     private MinigameStatus minigameStatus;
     
     [SerializeField] 
-    private List<Ingredient> requiredIngredients, availableIngredients, gatheredIngredients;
+    private List<Ingredient> availableIngredients;
+
+    private Customer customer = new Customer();
     
     private void Awake()
     {
-        foreach (var availableIngredient in availableIngredients)
-            availableIngredient.OnIngredientClick += AddIngredientToList;
+        holder.OnIngredientAdded += CheckIngredients;
 
-        if (alwaysIngredient != null)
-        {
-            alwaysIngredient.OnIngredientClick += AddIngredientToList;
-            requiredIngredients.Add(alwaysIngredient);
-        }
-
-        GenerateRequiredIngredientsList();
+        customer.GenerateIngredients(availableIngredients, minimumIngredients);
+        if (alwaysIngredient != null) customer?.AddIngredient(alwaysIngredient);
         PlaceRequiredItemsInBox();
     }
 
-    private void AddIngredientToList(Ingredient ingredient)
-    {
-        gatheredIngredients.Add(ingredient);
-
-        if (gatheredIngredients.UnorderedEqual(requiredIngredients))
+    private void CheckIngredients(List<Ingredient> ingredients) {
+        if (ingredients.UnorderedEqual(customer.RequiredIngredients))
             minigameStatus.CompleteMinigame();
-    }
-
-    private void GenerateRequiredIngredientsList()
-    {
-        var size = Random.Range(0, availableIngredients.Count);
-
-        for (var i = 0; i <= size; i++)
-            requiredIngredients.Add(GetRandomIngredient());
     }
 
     private void PlaceRequiredItemsInBox()
     {
         var position = new Vector3(-2f, 0f, 0f);
 
-        foreach (var ingredient in requiredIngredients)
+        foreach (var ingredient in customer.RequiredIngredients)
         {
             var prefab = Instantiate(requiredItemPrefab, position, transform.rotation);
             var prefabPosition = prefab.transform.position;
@@ -61,15 +52,5 @@ public class MinigameManager : MonoBehaviour
             
             position = new Vector3(position.x + 1f, position.y, position.z);
         }
-    }
-
-    private Ingredient GetRandomIngredient()
-    {
-        var ingredient = availableIngredients.GetRandom();
-
-        if (requiredIngredients.Contains(ingredient))
-            ingredient = GetRandomIngredient();
-
-        return ingredient;
     }
 }

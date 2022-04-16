@@ -293,15 +293,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220e436c5a42383eabb824e4745b392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alwaysIngredient: {fileID: 199678483211692398}
+  alwaysIngredient: {fileID: 0}
   itemBox: {fileID: 2255934178193786366}
   requiredItemPrefab: {fileID: 6010302142812763799, guid: 44c18cd8dbd264b94a5fdb6136cc819f, type: 3}
   minigameStatus: {fileID: 1895166812698758755}
-  requiredIngredients: []
   availableIngredients:
   - {fileID: 8927940178003344766}
   - {fileID: 6083461043521375276}
   - {fileID: 1594479039198030843}
+  requiredIngredients: []
   gatheredIngredients: []
 --- !u!114 &8570134913898465146
 MonoBehaviour:

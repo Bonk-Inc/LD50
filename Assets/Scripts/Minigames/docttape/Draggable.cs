@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +8,11 @@ public class Draggable : MonoBehaviour
     [SerializeField]
     private Camera cam;
 
-    public bool mouseOver = false;
-    public bool draggin = false;
+    private bool mouseOver = false;
+    private bool draggin = false;
     
+    public event Action OnStartDrag, OnEndDrag;
+
     private void OnMouseEnter() {
         mouseOver = true;
     }
@@ -23,19 +25,22 @@ public class Draggable : MonoBehaviour
 
         if(mouseOver && !draggin && Input.GetMouseButtonDown(0)){
             draggin = true;
+            OnStartDrag?.Invoke();
         }
 
-        if(draggin){
-            var position = transform.position;
+        if(draggin) UpdatePosition();
+
+        if(draggin && Input.GetMouseButtonUp(0)){
+            draggin = false;
+            OnEndDrag?.Invoke();
+        }
+    }
+
+    private void UpdatePosition() {
+        var position = transform.position;
             var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             position.x = mousePos.x;
             position.y = mousePos.y;
             transform.position = position;
-        }
-
-        if(draggin && Input.GetMouseButtonUp(0)){
-            draggin = false;
-        }
     }
-
 }
